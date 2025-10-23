@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reclutamiento | Departamento del Sheriff de REGIDOS</title>
+    <title>Rangos | Departamento del Sheriff de REGIDOS</title>
     <link rel="icon" type="image/x-icon" href="/LSSD-RegidosRP/favicon.ico">
     <link rel="stylesheet" href="/LSSD-RegidosRP/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,18 +26,129 @@
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>PROCESO DE RECLUTAMIENTO</h1>
-            <p style="font-size: 1.2em;">Requisitos y pasos para unirte a la Academia del Sheriff.</p>
-            <a href="[AQUÍ_VA_TU_ENLACE_AL_FORMULARIO]" target="_blank" class="btn btn-primary">Aplicar Ahora</a>
+            <h1>ESTRUCTURA DE RANGOS</h1>
+            <p style="font-size: 1.2em;">Jerarquía y funciones dentro del Departamento del Sheriff.</p>
         </div>
     </header>
 
     <main>
         <section class="container content-section">
-            <h2>Pasos de Aplicación</h2>
-            <p><strong>[AQUÍ VA EL CONTENIDO DETALLADO DEL PROCESO Y REQUISITOS]</strong></p>
+            <h2 style="color: var(--primary-color);">Jerarquía y Desarrollo Profesional</h2>
+            
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+                La estructura de rangos del Departamento del Sheriff de Regidos está diseñada para garantizar una cadena de mando clara, fomentar el desarrollo profesional continuo y reconocer la experiencia y el compromiso de nuestros miembros. Cada nivel conlleva mayores responsabilidades operacionales y administrativas.
+            </p>
+
+            <div class="rank-accordion">
+
+                <div class="rank-item">
+                    <div class="rank-header" onclick="toggleRank(this)">
+                        <span><i class="fas fa-crown" style="margin-right: 15px;"></i> ALTA DIRECCIÓN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content">
+                        <p>Esta escala constituye el liderazgo supremo del Departamento. Responsables de la estrategia, la visión y la toma de decisiones críticas, ejerciendo la máxima autoridad ejecutiva y operativa sobre todas las unidades.</p>
+                        <ul>
+                            <li><strong>SHERIFF:</strong> Director del Departamento. Máxima autoridad. (Máx. 1)</li>
+                            <li><strong>UNDERSHERIFF:</strong> Subdirector. Segundo al mando, responsable de la gestión diaria y la coordinación general. (Máx. 1)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-header" onclick="toggleRank(this)">
+                        <span><i class="fas fa-sitemap" style="margin-right: 15px;"></i> ESCALA JEFATURA</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content">
+                        <p>Oficiales que conforman el cuerpo de Jefatura. Encargados de la ejecución de estrategias, la supervisión de divisiones completas y el manejo de grandes eventos o crisis. Son líderes administrativos y de campo de alto nivel.</p>
+                        <ul>
+                            <li><strong>HIGH MARSHAL:</strong> Máxima autoridad de gestión en campo, responsable de unidades especiales. (Máx. 1)</li>
+                            <li><strong>COMMANDANT:</strong> Responsable de la coordinación de grandes turnos y la logística departamental. (Máx. 2)</li>
+                            <li><strong>WARDEN GENERAL:</strong> Enfoque en supervisión de grandes unidades y operaciones específicas. (Máx. 2)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-header" onclick="toggleRank(this)">
+                        <span><i class="fas fa-project-diagram" style="margin-right: 15px;"></i> ESCALA COORDINACIÓN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content">
+                        <p>Oficiales encargados de la coordinación táctica y la supervisión directa de los turnos de patrulla y las investigaciones. Son el enlace esencial entre la Jefatura y el personal de campo, asegurando que las directrices se implementen correctamente.</p>
+                        <ul>
+                            <li><strong>MAJOR:</strong> Coordinador de Área o Sección Especial, con responsabilidad sobre grandes grupos de personal. (Máx. 2)</li>
+                            <li><strong>CAPTAIN:</strong> Lidera un turno o sección específica, responsable del rendimiento de sus Deputies. (Máx. 3)</li>
+                            <li><strong>LIEUTENANT:</strong> Supervisión en calle y evaluación de desempeño operativo de primera línea. (Máx. 4)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rank-item">
+                    <div class="rank-header" onclick="toggleRank(this)">
+                        <span><i class="fas fa-road" style="margin-right: 15px;"></i> ESCALA OPERATIVA</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content">
+                        <p>Esta escala incluye a los Agentes más experimentados, con responsabilidades de supervisión inmediata en la calle y la capacidad de liderar operaciones menores. Sirven como mentores para los recién llegados y son el primer nivel de mando directo.</p>
+                        <ul>
+                            <li><strong>SERGEANT Ⅱ:</strong> Máximo grado de Sargento, con responsabilidades de instrucción y gestión de incidentes complejos. (Máx. 5)</li>
+                            <li><strong>SERGEANT Ⅰ:</strong> Primer nivel de supervisión en campo, a cargo de equipos de patrulla y respuesta inmediata. (Sin Límite)</li>
+                            <li><strong>CORPORATIVE DEPUTY:</strong> Agente veterano con experiencia, capaz de asumir la responsabilidad de un incidente en ausencia de un sargento. (Sin Límite)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-item">
+                    <div class="rank-header" onclick="toggleRank(this)">
+                        <span><i class="fas fa-user-shield" style="margin-right: 15px;"></i> ESCALA BÁSICA</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content">
+                        <p>El núcleo del Departamento. Estos agentes cumplen con las funciones esenciales de patrulla, respuesta a emergencias y aplicación de la ley. Su progresión se basa en el tiempo de servicio, la demostración de competencia y la formación continua.</p>
+                        <ul>
+                            <li><strong>SENIOR DEPUTY:</strong> Deputy de alto rango, con varios años de experiencia y entrenamiento especializado. (Sin Límite)</li>
+                            <li><strong>DEPUTY SHERIFF Ⅱ:</strong> Agente consolidado que ha completado su período de prueba y demuestra autonomía y competencia. (Sin Límite)</li>
+                            <li><strong>DEPUTY SHERIFF Ⅰ:</strong> Agente recién graduado de la Academia, con autonomía en funciones básicas. (Sin Límite)</li>
+                            <li><strong>DEPUTY TRAINEE:</strong> Oficial en la fase final de la Academia, realizando prácticas tuteladas por un FTO. (Sin Límite)</li>
+                            <li><strong>JUNIOR DEPUTY:</strong> Agente en los primeros meses de servicio, bajo estricta supervisión y periodo de prueba. (Sin Límite)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <hr style="border-color: var(--border-color); margin: 60px 0;">
+
+            <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-top: 5px solid var(--secondary-color);">
+                <h3 style="color: var(--primary-color); margin-top: 0;"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> SISTEMA DE EXÁMENES Y ASCENSOS</h3>
+                <p style="color: #ccc; margin-bottom: 20px;">
+                    Todos los ascensos en LSSD se rigen por un sistema estructurado de formación interna y evaluaciones oficiales. La promoción a rangos superiores requiere la superación de exámenes teórico-prácticos específicos, diseñados para validar el conocimiento normativo y la competencia operacional.
+                </p>
+                <p style="color: #ccc;">
+                    Adicionalmente, es obligatorio demostrar un compromiso, disciplina y experiencia impecables durante el servicio, asegurando que cada ascenso se base en el mérito y la capacidad de liderazgo.
+                </p>
+            </div>
         </section>
     </main>
+
+    <script>
+        function toggleRank(element) {
+            // Obtiene el contenedor de contenido asociado al encabezado
+            const content = element.nextElementSibling;
+            
+            // Cierra los demás acordeones abiertos
+            document.querySelectorAll('.rank-content').forEach(item => {
+                if (item !== content && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                }
+            });
+
+            // Alterna el estado del contenido actual
+            content.classList.toggle('active');
+            element.classList.toggle('active');
+        }
+    </script>
 
     <footer>
         <p>&copy; 2024 Departamento del Sheriff de Regidos. Todos los derechos reservados.</p>
