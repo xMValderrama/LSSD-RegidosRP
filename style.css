@@ -36,24 +36,22 @@ h1, h2, h3 {
 
 /* Estilos de la cabecera (Header/Hero) */
 .hero.small-hero {
-    /* Asegúrate de que tu header tenga la altura deseada y el fondo */
     min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    padding-top: 80px; /* Para hacer espacio a la navbar fija o flotante */
+    padding-top: 80px; 
 }
 
 .hero-overlay {
-    /* Estilo del overlay, si lo usas */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
 
@@ -64,7 +62,7 @@ h1, h2, h3 {
 
 /* Estilos de la barra de navegación (Navbar) */
 .navbar {
-    position: absolute; /* o fixed, dependiendo de tu diseño */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -72,7 +70,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: var(--card-background); /* Fondo de la barra */
+    background-color: var(--card-background); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
@@ -104,10 +102,6 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-.content-section {
-    /* Aquí ya tienes padding: 60px 20px; en línea, pero puedes moverlo aquí */
-}
-
 /* ================================================= */
 /* === 2. Maquetación y Componentes (SOLUCIÓN AL PROBLEMA "APRETADO") === */
 /* ================================================= */
@@ -126,7 +120,7 @@ h1, h2, h3 {
     background-color: var(--card-background); 
     padding: 30px; /* Espaciado interno generoso para evitar que se vea apretado */
     border-radius: 8px;
-    height: 100%; /* Asegura que las tarjetas en row-flex tengan la misma altura si el contenido es similar */
+    height: 100%; 
     box-sizing: border-box;
 }
 
@@ -166,12 +160,12 @@ h1, h2, h3 {
 
 /* Define el ancho de las columnas (50% en escritorio) */
 .col-6 {
-    flex: 1; /* Esto hace que ambas columnas en .row-flex tomen el 50% del espacio disponible */
-    min-width: 0; /* Corrección para flexbox con contenido largo */
+    flex: 1; 
+    min-width: 0; 
 }
 
 
-/* --- ESTILOS DE LISTAS --- */
+/* --- ESTILOS DE LISTAS GENERALES --- */
 
 /* Lista sin viñetas (usada en Reglas Generales) */
 .list-unstyled {
@@ -208,32 +202,54 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-/* Listas con múltiples columnas (Códigos 10) */
-.list-columns {
+/* --- ESTILOS PARA LISTAS DE DEFINICIÓN (CÓDIGOS OPERACIONALES) --- */
+
+.list-definitions {
+    /* Reseteo de estilos de lista */
     list-style: none;
     padding: 0;
     margin-top: 15px;
-    columns: 1; /* Por defecto, una columna en la base (se sobreescribe en desktop) */
     color: var(--text-muted);
+    /* Usar GRID para la maquetación en columnas */
+    display: grid;
+    /* Divide el espacio en dos columnas: Código y Descripción */
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 15px 15px; /* Espacio entre filas y columnas */
 }
 
-.list-columns li {
-    margin-bottom: 5px;
-    break-inside: avoid; /* Evita que los elementos se corten entre columnas */
+.list-definitions dt {
+    /* El término (Código) siempre en negrita y alineado a la izquierda */
+    font-weight: 700;
+    color: var(--text-light); /* Para que el código resalte */
+    margin-bottom: 0;
+    grid-column: 1 / 2; /* Se coloca en la primera columna */
+    text-align: left;
 }
 
-.list-columns-2 {
-    columns: 2; /* 2 columnas para Códigos Operacionales en escritorio */
+.list-definitions dd {
+    /* La definición (Descripción) se coloca en la segunda columna */
+    margin-left: 0;
+    margin-bottom: 0;
+    grid-column: 2 / 3; /* Se coloca en la segunda columna */
+    text-align: left;
 }
 
+/* Modificación para la lista de Códigos de Radio (3 columnas visuales) */
 .list-columns-3 {
-    columns: 3; /* 3 columnas para Códigos de Radio 10 en escritorio */
+    /* Usamos 4 columnas para emular 2 columnas de información (Término+Definición) */
+    grid-template-columns: 0.7fr 1.3fr 0.7fr 1.3fr;
+    gap: 15px 30px; /* Separación horizontal extra para que no se peguen */
 }
+
+/* Las reglas de colocación fuerzan los elementos a las columnas 1, 2, 3, 4 */
+.list-columns-3 dt:nth-child(4n - 3) { grid-column: 1 / 2; } /* Item 1 (Col 1) */
+.list-columns-3 dd:nth-child(4n - 2) { grid-column: 2 / 3; } /* Item 1 Desc (Col 2) */
+.list-columns-3 dt:nth-child(4n - 1) { grid-column: 3 / 4; } /* Item 2 (Col 3) */
+.list-columns-3 dd:nth-child(4n)   { grid-column: 4 / 5; } /* Item 2 Desc (Col 4) */
 
 
 /* --- UTILIDADES VISUALES (Iconos y Resaltado) --- */
 
-/* Resaltado de texto fuerte */
 strong {
     font-weight: 700;
     color: var(--primary-color);
@@ -241,8 +257,7 @@ strong {
 
 .list-unstyled li strong, 
 .list-bullet li strong,
-.list-ordered li strong,
-.list-columns li strong {
+.list-ordered li strong {
     color: var(--text-light); /* Asegura que los títulos de listas se vean más blancos */
 }
 
@@ -256,10 +271,8 @@ strong {
     margin-right: 10px; 
 }
 
-
 /* --- CAJAS DE ALERTA E INFORMACIÓN --- */
 
-/* Cuadro de advertencia (Derechos del Detenido) */
 .warning-box {
     background-color: #282828;
     padding: 15px;
@@ -279,7 +292,6 @@ strong {
     font-size: 0.9em;
 }
 
-/* Cuadro de información (Alertas, Firmas) */
 .info-box {
     text-align: center;
     margin-top: 60px;
@@ -316,16 +328,6 @@ strong {
         padding: 15px 20px;
     }
 
-    .nav-links {
-        /* Ejemplo: ocultar menú y mostrar icono de hamburguesa */
-        /* display: none; */ 
-    }
-
-    /* Contenido principal */
-    .container {
-        padding: 0 15px;
-    }
-
     /* Convierte las filas de columnas a una sola columna (solución al "apretado") */
     .row-flex {
         flex-direction: column;
@@ -338,9 +340,39 @@ strong {
         width: 100%;
     }
 
-    /* Las listas de códigos (2 y 3 columnas) se convierten a una sola columna */
-    .list-columns-2, .list-columns-3 {
-        columns: 1;
+    /* -- Listas de Definición en Móvil -- */
+    .list-definitions {
+        /* Vuelve a una sola columna */
+        grid-template-columns: 1fr;
+        gap: 0; /* No hay separación horizontal */
+    }
+    
+    .list-definitions dt, 
+    .list-definitions dd {
+        grid-column: 1 / -1; /* Ocupa todo el ancho */
+        text-align: left;
+    }
+    
+    .list-definitions dt {
+        margin-top: 10px; /* Separación entre el código anterior y el nuevo */
+        margin-bottom: 5px; 
+    }
+    
+    .list-definitions dd {
+        margin-bottom: 10px;
+    }
+
+    /* Códigos de Radio (4 columnas) se convierten a 1 columna en móvil */
+    .list-columns-3 {
+        grid-template-columns: 1fr; 
+        gap: 0;
+    }
+
+    .list-columns-3 dt:nth-child(4n - 3),
+    .list-columns-3 dt:nth-child(4n - 1),
+    .list-columns-3 dd:nth-child(4n - 2),
+    .list-columns-3 dd:nth-child(4n) {
+        grid-column: 1 / -1; 
     }
 
     /* Reduce el padding de las tarjetas para pantallas pequeñas */
