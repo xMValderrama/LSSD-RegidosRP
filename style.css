@@ -1,304 +1,350 @@
-/* VARIABLES GLOBALES Y RESET BÁSICO (PALETA DESIERTO SHERIFF) */
+/* ================================================= */
+/* === 0. Variables CSS (Ajustar según tus colores) === */
+/* ================================================= */
 :root {
-    --primary-color: #A37E2F; /* Color Desierto Sheriff (Botones, Títulos) */
-    --secondary-color: #6B4F1B; /* Contraste/Énfasis (Hover) */
-    --text-light: #f4f4f4; /* Blanco roto */
-    --text-dark: #221C14; 
-    --background-dark: #1A150F; /* Fondo General (Marrón-Negro) */
-    --card-background: #221C14; /* Fondo de Tarjetas y Secciones */
-    --border-color: #443C31; /* Borde oscuro */
+    /* Colores primarios y secundarios (ajusta estos a tu paleta) */
+    --primary-color: #FFC107;      /* Amarillo/Dorado para títulos principales y acentos */
+    --secondary-color: #007bff;    /* Azul para bordes y acentos secundarios */
+    
+    /* Colores de fondo y texto */
+    --background-color: #121212;   /* Fondo principal oscuro */
+    --card-background: #1e1e1e;    /* Fondo de las tarjetas de reglas */
+    --text-light: #f5f5f5;         /* Texto claro general */
+    --text-muted: #ccc;            /* Texto secundario */
+    --border-color: #333;          /* Borde sutil */
+    
+    /* Espaciado */
+    --spacing-gap: 40px;           /* Espaciado estándar entre elementos (usado en .row-flex y .container-content) */
 }
 
-* {
+/* ================================================= */
+/* === 1. Estilos Globales y Tipografía (Base) === */
+/* ================================================= */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-light);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    /* FUENTE PARA CUERPO */
-    font-family: 'Lato', sans-serif;
-    background-color: var(--background-dark);
-    color: var(--text-light);
     line-height: 1.6;
 }
 
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--secondary-color);
-}
-
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
 h1, h2, h3 {
-    /* FUENTE PARA TÍTULOS */
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 15px;
-    font-weight: 700;
+    color: var(--text-light);
 }
 
-h2 {
-    text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 40px;
-    color: var(--primary-color);
-}
-
-/* --- ESTILOS DE BOTONES --- */
-.btn {
-    display: inline-block;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--text-dark); /* Color oscuro para contraste con el desierto */
-    border: 2px solid var(--primary-color);
-}
-
-.btn-primary:hover {
-    background-color: #927129; /* Tono más oscuro al hacer hover */
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--text-dark);
-    transform: translateY(-2px);
-}
-
-/* --- CABECERA (HERO SECTION) --- */
-.hero {
-    /* Mantenemos tu imagen subida */
-    background: url('https://i.ibb.co/GfGR4jL0/imagen-2025-10-22-121125902.png') no-repeat center center/cover; 
-    height: 80vh; 
+/* Estilos de la cabecera (Header/Hero) */
+.hero.small-hero {
+    /* Asegúrate de que tu header tenga la altura deseada y el fondo */
+    min-height: 250px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
-
-/* Ajuste para páginas interiores (hace el encabezado más pequeño) */
-.small-hero {
-    height: 40vh !important;
-}
-
-.small-hero .hero-content {
-    margin-bottom: 20px;
+    position: relative;
+    padding-top: 80px; /* Para hacer espacio a la navbar fija o flotante */
 }
 
 .hero-overlay {
+    /* Estilo del overlay, si lo usas */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Oscurece la imagen para que el texto resalte */
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
     z-index: 1;
 }
 
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos de la barra de navegación (Navbar) */
 .navbar {
+    position: absolute; /* o fixed, dependiendo de tu diseño */
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    position: relative;
+    padding: 15px 50px;
+    background-color: var(--card-background); /* Fondo de la barra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 10;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: 700;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
+.nav-links li a {
+    text-decoration: none;
     color: var(--text-light);
-    font-weight: 500;
-    padding: 5px 10px;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 5;
-    padding: 0 5%;
-    margin-bottom: 80px;
-}
-
-.hero-content h1 {
-    font-size: 4em; /* Título más grande */
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-}
-
-.hero-content p {
-    font-size: 1.4em;
-    margin-bottom: 30px;
-    color: #ccc;
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: var(--background-dark);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    color: #666;
-    border-top: 1px solid var(--border-color);
-}
-
-/* --- ESTILOS ADICIONALES PARA TARJETAS DE VALORES (about.html) --- */
-.value-card {
-    background-color: var(--card-background);
-    padding: 18px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    border-bottom: 3px solid var(--secondary-color);
-}
-
-.value-card strong {
-    color: var(--primary-color);
+    padding: 10px 15px;
     display: block;
-    margin-bottom: 5px;
-    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
-.value-card p {
-    font-size: 0.9em;
-    color: #b0b0b0;
-    margin-top: 5px;
-}
-
-/* --- ESTILOS ADICIONALES PARA RANGOS (ranks.html) --- */
-
-.rank-accordion {
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.rank-item {
-    background-color: var(--card-background);
-    color: var(--text-light);
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: background-color 0.3s;
-}
-
-.rank-item:hover {
-    background-color: #282828; 
-}
-
-.rank-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: uppercase;
+.nav-links li a:hover {
     color: var(--primary-color);
 }
 
-.rank-header i {
-    color: var(--primary-color);
-    transition: transform 0.3s;
-}
-
-.rank-header.active i {
-    transform: rotate(180deg);
-}
-
-.rank-content {
+/* Estilos de la sección principal (Main) */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-    border-top: 1px solid var(--border-color);
 }
 
-.rank-content.active {
-    max-height: 500px;
-    padding: 20px;
+.content-section {
+    /* Aquí ya tienes padding: 60px 20px; en línea, pero puedes moverlo aquí */
 }
 
-.rank-content p {
-    margin-bottom: 15px;
-    color: #ccc;
+/* ================================================= */
+/* === 2. Maquetación y Componentes (SOLUCIÓN AL PROBLEMA "APRETADO") === */
+/* ================================================= */
+
+/* Contenedor principal para centrar las tarjetas y controlar el espaciado vertical */
+.container-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap); /* Espaciado uniforme entre todas las tarjetas/filas */
+    max-width: 900px; /* Ancho máximo de la columna de contenido */
+    margin: 0 auto;
 }
 
-.rank-content ul {
-    list-style: disc;
-    margin-left: 20px;
-    color: #ccc;
+/* Tarjeta base para todas las secciones de reglas */
+.rule-card {
+    background-color: var(--card-background); 
+    padding: 30px; /* Espaciado interno generoso para evitar que se vea apretado */
+    border-radius: 8px;
+    height: 100%; /* Asegura que las tarjetas en row-flex tengan la misma altura si el contenido es similar */
+    box-sizing: border-box;
+}
+
+/* Estilo para los títulos de las tarjetas */
+.card-title {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5em;
 }
 
-.rank-content strong {
+/* Estilo para los textos dentro de las tarjetas */
+.card-text {
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+.card-subtitle {
+    color: var(--text-muted);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: var(--text-muted);
+}
+
+/* --- FLEXBOX PARA COLUMNAS (50/50) --- */
+.row-flex {
+    display: flex;
+    gap: var(--spacing-gap); /* Espaciado entre las columnas horizontales */
+}
+
+/* Define el ancho de las columnas (50% en escritorio) */
+.col-6 {
+    flex: 1; /* Esto hace que ambas columnas en .row-flex tomen el 50% del espacio disponible */
+    min-width: 0; /* Corrección para flexbox con contenido largo */
+}
+
+
+/* --- ESTILOS DE LISTAS --- */
+
+/* Lista sin viñetas (usada en Reglas Generales) */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.list-unstyled li {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+/* Lista con viñetas (puntos) */
+.list-bullet {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+    color: var(--text-muted);
+}
+
+.list-bullet li {
+    margin-bottom: 5px;
+}
+
+/* Lista ordenada (números) */
+.list-ordered {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.list-ordered li {
+    margin-bottom: 10px;
+}
+
+/* Listas con múltiples columnas (Códigos 10) */
+.list-columns {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    columns: 1; /* Por defecto, una columna en la base (se sobreescribe en desktop) */
+    color: var(--text-muted);
+}
+
+.list-columns li {
+    margin-bottom: 5px;
+    break-inside: avoid; /* Evita que los elementos se corten entre columnas */
+}
+
+.list-columns-2 {
+    columns: 2; /* 2 columnas para Códigos Operacionales en escritorio */
+}
+
+.list-columns-3 {
+    columns: 3; /* 3 columnas para Códigos de Radio 10 en escritorio */
+}
+
+
+/* --- UTILIDADES VISUALES (Iconos y Resaltado) --- */
+
+/* Resaltado de texto fuerte */
+strong {
+    font-weight: 700;
     color: var(--primary-color);
 }
 
-/* --- RESPONSIVE DESIGN (Ajustes para móviles) --- */
-@media (max-width: 768px) {
-    .hero {
-        height: 60vh;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-    
-    .nav-links {
-        display: none; /* Ocultar en móviles por simplicidad */
-    }
-
-    .hero-content p {
-        font-size: 1.1em;
-    }
-    
-    /* Para about.html */
-    div[style*="display: flex"] {
-        flex-direction: column;
-    }
-    
-    div[style*="flex: 1"], div[style*="flex: 2"] {
-        width: 100% !important;
-    }
+.list-unstyled li strong, 
+.list-bullet li strong,
+.list-ordered li strong,
+.list-columns li strong {
+    color: var(--text-light); /* Asegura que los títulos de listas se vean más blancos */
 }
 
+.check-icon { 
+    color: var(--secondary-color); 
+    margin-right: 10px; 
+}
+
+.cross-icon { 
+    color: #DC3545; /* Rojo de advertencia */ 
+    margin-right: 10px; 
+}
+
+
+/* --- CAJAS DE ALERTA E INFORMACIÓN --- */
+
+/* Cuadro de advertencia (Derechos del Detenido) */
+.warning-box {
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.warning-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.warning-text {
+    color: var(--text-muted);
+    font-size: 0.9em;
+}
+
+/* Cuadro de información (Alertas, Firmas) */
+.info-box {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    border: 1px dashed var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--card-background);
+}
+
+.info-title {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.info-text {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.info-signature {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+
+/* ================================================= */
+/* === 3. MEDIA QUERY (Diseño Responsive) === */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    /* Navbar en móvil */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        /* Ejemplo: ocultar menú y mostrar icono de hamburguesa */
+        /* display: none; */ 
+    }
+
+    /* Contenido principal */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Convierte las filas de columnas a una sola columna (solución al "apretado") */
+    .row-flex {
+        flex-direction: column;
+        gap: 20px; /* Reduce el espaciado entre filas en móvil */
+    }
+
+    /* Asegura que las columnas tomen el 100% del ancho en móvil */
+    .col-6 {
+        flex: auto;
+        width: 100%;
+    }
+
+    /* Las listas de códigos (2 y 3 columnas) se convierten a una sola columna */
+    .list-columns-2, .list-columns-3 {
+        columns: 1;
+    }
+
+    /* Reduce el padding de las tarjetas para pantallas pequeñas */
+    .rule-card {
+        padding: 20px;
+    }
+}
