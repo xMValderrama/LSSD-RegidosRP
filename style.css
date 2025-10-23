@@ -90,7 +90,7 @@ h2 {
 /* --- CABECERA (HERO SECTION) --- */
 .hero {
     /* Mantenemos tu imagen subida */
-    background: url('image_0c6c1b.jpg') no-repeat center center/cover; 
+    background: url('https://i.ibb.co/GfGR4jL0/imagen-2025-10-22-121125902.png') no-repeat center center/cover; 
     height: 80vh; 
     display: flex;
     flex-direction: column;
@@ -301,3 +301,4 @@ footer {
         width: 100% !important;
     }
 }
+
