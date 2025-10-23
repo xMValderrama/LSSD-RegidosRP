@@ -3,250 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normativa | Departamento del Sheriff de REGIDOS</title>
-    <link rel="icon" type="image/x-icon" href="/LSSD-RegidosRP/favicon.ico">
-    <link rel="stylesheet" href="/LSSD-RegidosRP/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Normativa - LSSD Regidos RP</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero small-hero">
+    <header class="hero small-hero" style="background-image: url('tu-imagen-de-fondo.jpg');">
         <div class="hero-overlay"></div>
         <nav class="navbar">
-            <div class="logo"><img src="logo.png" alt="Logo LSSD Regidos" style="height: 50px; width: auto;"></div>
+            <div class="logo">Logo LSSD Regidos</div>
             <ul class="nav-links">
-                <li><a href="/LSSD-RegidosRP/index.html">Inicio</a></li> 
-                <li><a href="/LSSD-RegidosRP/about.html">Nosotros</a></li>
-                <li><a href="/LSSD-RegidosRP/ranks.html">Rangos</a></li>
-                <li><a href="/LSSD-RegidosRP/rules.html">Normativa</a></li>
-                <li><a href="/LSSD-RegidosRP/recruitment.html">Reclutamiento</a></li>
-                <li><a href="/LSSD-RegidosRP/contact.html">Contacto</a></li> 
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="ranks.html">Rangos</a></li>
+                <li><a href="rules.html" class="active">Normativa</a></li>
+                <li><a href="recruitment.html">Reclutamiento</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>REGLAS Y NORMAS OFICIALES</h1>
-            <p style="font-size: 1.2em;">Documentación esencial para todo miembro del Departamento.</p>
+            <h1 class="text-light">Normativa LSSD</h1>
+            <p class="text-muted">Reglas Generales, Códigos y Procedimientos Operacionales.</p>
         </div>
     </header>
-
-    <main>
-        <section class="container content-section" style="padding: 60px 20px;">
-            <h2 style="color: var(--primary-color);">Regulaciones Internas y Protocolos Operacionales</h2>
+    
+    <main class="content-section" style="padding: 60px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; color: var(--primary-color);">Reglamento Operativo del Departamento del Sheriff de Regidos</h2>
             
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px; color: #ccc;">
-                El cumplimiento estricto de esta normativa es un requisito fundamental para mantener el profesionalismo, la legalidad y la eficacia operativa del LSSD. Todos los miembros deben conocer y acatar este reglamento.
-            </p>
+            <div class="container-content">
 
-            <div style="display: flex; flex-direction: column; gap: 40px; max-width: 900px; margin: 0 auto;">
-
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-gavel" style="margin-right: 10px;"></i> REGLAS GENERALES LSSD
-                    </h3>
-                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Respetar a todos los compañeros independientemente del rango y obedecer las órdenes de los superiores.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-times-circle" style="color: #DC3545; margin-right: 10px;"></i> No hacer actos delictivos fuera ni dentro de servicio, se considera CORRUPCIÓN y conlleva expulsión directa del cuerpo. Esto incluye ir a puntos como médico ilegal, limpieza de dinero, venta de armas, puntos calientes, etc.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-times-circle" style="color: #DC3545; margin-right: 10px;"></i> No vender armas y objetos de carácter policial (Carabina, porra, taser, chaleco, etc).</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-headset" style="color: var(--secondary-color); margin-right: 10px;"></i> Es obligatorio cuando estés de servicio estar en radio y con referencia.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-user-times" style="color: var(--secondary-color); margin-right: 10px;"></i> Está prohibido quedarse AFK en comisaría o en un canal de radio.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-user-tie" style="color: var(--secondary-color); margin-right: 10px;"></i> El H-50 siempre será el rango más alto que esté de servicio a excepción de la Jefatura, ellos podrán decidir poner a otro miembro policial al cargo.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-car-side" style="color: var(--secondary-color); margin-right: 10px;"></i> Se deberá usar los coches establecidos por rango o por situaciones, respetando siempre no usar coches de divisiones o de rangos superiores.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-fist-raised" style="color: var(--secondary-color); margin-right: 10px;"></i> El uso de fuerza letal solo está permitido como último recurso y debe ser justificado (estar realmente en peligro). Taser y porra solo para peleas cuerpo a cuerpo.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-graduation-cap" style="color: var(--secondary-color); margin-right: 10px;"></i> Los nuevos cadetes o agentes deberán superar las instrucciones obligatorias; al suspender la segunda oportunidad, serán expulsados.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-volume-up" style="color: var(--secondary-color); margin-right: 10px;"></i> En situaciones de emergencia, todos los oficiales deberán acudir y hacer estrictamente lo que le ordene el H-50.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-ban" style="color: #DC3545; margin-right: 10px;"></i> Queda prohibido compartir información interna de la policía con civiles o miembros de otros grupos.</li>
-                        <li style="margin-bottom: 10px; color: #ccc;"><i class="fas fa-stop-circle" style="color: #DC3545; margin-right: 10px;"></i> No abusar de la autoridad policial para forzar situaciones de rol injustas o desbalanceadas.</li>
-                    </ul>
-                </div>
-
-                <div style="display: flex; gap: 40px;">
-                    <div style="flex: 1; background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--secondary-color);">
-                        <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                            <i class="fas fa-user-cog" style="margin-right: 10px;"></i> 1. Funciones del Sheriff
-                        </h3>
-                        <p style="color: #ccc; margin-top: 15px;">
-                            La función principal de los Sheriff es garantizar la seguridad, el orden y la estabilidad en la ciudad.
-                        </p>
-                        <ul style="list-style: disc; padding-left: 20px; color: #ccc; margin-top: 15px;">
-                            <li style="margin-bottom: 5px;">Realizar patrullajes constantes y acudir a avisos policiales.</li>
-                            <li style="margin-bottom: 5px;">Acudir a los robos a establecimientos.</li>
-                            <li style="margin-bottom: 5px;">Podrán realizar redadas con aprobación de algún miembro de Jefatura y bajo su supervisión.</li>
-                        </ul>
-                    </div>
-
-                    <div style="flex: 1; background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--secondary-color);">
-                        <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                            <i class="fas fa-list-ol" style="margin-right: 10px;"></i> 2. Códigos Operacionales
-                        </h3>
-                        <ul style="list-style: none; padding: 0; margin-top: 15px; columns: 2;">
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 1:</strong> PERSECUCIÓN.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 2:</strong> TIROTEO.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 3:</strong> ATRACO.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 4:</strong> DENUNCIA EN COMISARÍA.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 5:</strong> PROCESANDO DETENIDO.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 7:</strong> MECÁNICO.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 8:</strong> EMS.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CÓDIGO 100:</strong> Barrera policial (en persecución)</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>QRR:</strong> Agente en peligro de muerte.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>PIT:</strong> Desestabilizar un vehículo.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>CLAVE ROBERT:</strong> Disparar a las ruedas.</li>
-                            <li style="margin-bottom: 5px; color: #ccc;"><strong>MODO CHARLIE:</strong> Silencio en radio.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-headset" style="margin-right: 10px;"></i> 3. Códigos de Radio 10
-                    </h3>
-                    <ul style="list-style: none; padding: 0; margin-top: 15px; columns: 3;">
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-0:</strong> Agente Abatido</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-3:</strong> Precaución</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-4:</strong> Afirmativo</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-5:</strong> Negativo</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-6:</strong> Ocupados</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-7:</strong> Disponible</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-8:</strong> Vuelta a comisaría</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-9:</strong> Mandar a repetir lo que se dijo en Radio</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-10:</strong> Abandonó el servicio</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-15:</strong> Persona enmascarada</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-20:</strong> Posición actual del agente</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-32:</strong> Necesito refuerzos</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-33:</strong> Patrullando</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-35:</strong> Comprobación de radio</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-37:</strong> Solicitar grúa</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-38:</strong> Solicitar Ambulancia</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-42:</strong> Zona despejada</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-55:</strong> Falsa alarma</li>
-                        <li style="margin-bottom: 5px; color: #ccc;"><strong>10-97:</strong> En camino</li>
+                <div class="rule-card">
+                    <h3 class="card-title"><span class="fas fa-gavel check-icon"></span> 1. Reglas Generales LSSD</h3>
+                    <ul class="list-unstyled">
+                        [cite_start]<li><i class="check-icon fas fa-check-circle"></i> <strong>Respeto y Obediencia:</strong> Respetar a todos los compañeros independientemente del rango y obedecer las órdenes de los superiores. [cite: 21]</li>
+                        [cite_start]<li><i class="cross-icon fas fa-times-circle"></i> <strong>Corrupción:</strong> No hacer actos delictivos fuera ni dentro de servicio, se considera CORRUPCIÓN y conlleva expulsión directa del cuerpo. [cite: 22] [cite_start]Dentro de este punto cuenta ir a puntos como médico ilegal, limpieza de dinero, venta de armas, puntos calientes, etc. [cite: 23]</li>
+                        <li><i class="cross-icon fas fa-times-circle"></i> <strong>Venta Policial:</strong> No vender armas y objetos de carácter policial (Carabina, porra, taser, chaleco, etc). [cite_start]Será sanción administrativa aparte de expulsión directa del cuerpo. [cite: 24]</li>
+                        [cite_start]<li><i class="check-icon fas fa-volume-up"></i> <strong>Radio/Referencia:</strong> Es obligatorio cuando estés de servicio estar en radio y con referencia. [cite: 25]</li>
+                        [cite_start]<li><i class="cross-icon fas fa-shield-alt"></i> <strong>Armas Fuera de Servicio:</strong> No puedes llevar armas fuera de servicio más que la pistola legal. [cite: 26]</li>
+                        [cite_start]<li><i class="cross-icon fas fa-clock"></i> <strong>AFK:</strong> Está prohibido quedarse AFK en comisaría o en un canal de radio, en caso de hacerlo puede llegar a ser sancionado internamente. [cite: 27]</li>
+                        [cite_start]<li><i class="check-icon fas fa-user-tag"></i> <strong>H-50:</strong> El H-50 siempre será el rango más alto que esté de servicio a excepción de la Jefatura, ellos podrán decidir poner a otro miembro policial al cargo. [cite: 28]</li>
+                        [cite_start]<li><i class="check-icon fas fa-car"></i> <strong>Vehículos:</strong> Se deberá usar los coches establecidos por rango o por situaciones, siempre se deberá respetar esta norma y nunca usar coches de divisiones o de rangos superiores. [cite: 29]</li>
+                        [cite_start]<li><i class="cross-icon fas fa-fire"></i> <strong>Fuerza Letal:</strong> El uso de fuerza letal solo está permitido como último recurso y debe ser justificado (estar realmente en peligro), al igual que sólo se podrá usar el taser y la porra para peleas cuerpo a cuerpo. [cite: 30]</li>
+                        [cite_start]<li><i class="cross-icon fas fa-share-alt"></i> <strong>Información Interna:</strong> Queda prohibido compartir información interna de la policía (como tácticas, ubicaciones de operaciones, etc.) con civiles o miembros de otros grupos. [cite: 34]</li>
+                        [cite_start]<li><i class="cross-icon fas fa-balance-scale-left"></i> <strong>Abuso de Autoridad:</strong> No abusar de la autoridad policial para forzar situaciones de rol injustas o desbalanceadas. [cite: 35]</li>
                     </ul>
                 </div>
                 
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--secondary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-sign-in-alt" style="margin-right: 10px;"></i> 4. Cómo entrar de servicio
-                    </h3>
-                    <ol style="margin-top: 15px; padding-left: 20px; color: #ccc;">
-                        <li style="margin-bottom: 10px;"><strong>Fichar en Discord:<strong> Registra tu entrada en el canal correspondiente en horario español peninsular.</li>
-                        <li style="margin-bottom: 10px;"><strong>Preparar Equipo:<strong> Recoge armas reglamentarias (taser, porra, pistola y SMG) y uniforme.</li>
-                        <li style="margin-bottom: 10px;"><strong>Notificar al H-50:<strong> Informa por radio tu disponibilidad (Ejemplo: "H-50 aquí Cadete Pepe Pérez, esperando asignación.")</li>
-                        <li style="margin-bottom: 10px;"><strong>Asignación de Referencia:<strong> El H-50 te dará una referencia; únete a su radio interna y coordina con tu unidad.</li>
-                        <li style="margin-bottom: 10px;"><strong>Comprobación<strong> Verifica equipo, radio en frecuencia correcta y vehículo en buen estado antes de salir a patrullar.</li>
-                        <li style="margin-bottom: 10px;"><strong>Sin H-50:<strong> Si no hay H-50, consulta con el oficial de mayor rango o, en casos generales, te colocas como H-50.</li>
-                    </ol>
-                </div>
-
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-gun" style="margin-right: 10px;"></i> 5. Armamento
-                    </h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #ccc; margin-top: 15px;">
-                        <li style="margin-bottom: 10px;"><strong>Armamento Reglamentario:<strong> Taser, Porra, Pistola reglamentaria, SMG, 3 chalecos (uno puesto y dos encima) y entre 70 y 100 balas.</li>
-                        <li style="margin-bottom: 10px;"><strong>Armamento Fuera de Servicio:<strong> Solo la Pistola Legal (9mm).</li>
-                        <li style="margin-bottom: 10px;"><strong>Armamento en Alerta III:<strong> Se sustituye la SMG por la Carabina.</li>
-                        <li style="margin-bottom: 10px;"><strong>Armamento para Divisiones:<strong> Cada división tendrá su armamento reglamentario privado (SMG, SMG de Combate, Escopeta, Rifle Avanzado, Carabina Especial, Rifles, Francotirador y Francotirador Pesado). Cada arma debe estar nivelada con la situación.</li>
-                    </ul>
-                </div>
-
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--secondary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-handcuffs" style="margin-right: 10px;"></i> 6. Cómo procesar a un detenido
-                    </h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #ccc; margin-top: 15px;">
-                        <li style="margin-bottom: 10px;">Deberás usar el `/me` y el `/do`. Ejemplo: `/do cachea al sujeto y le retira "lo que le quites"`.</li>
-                        <li style="margin-bottom: 10px;">A la hora de hacer cualquier acción será obligatorio tener las manos libres (No tener el arma en la mano, como mucho la pistola).</li>
-                        <li style="margin-bottom: 10px;">**Lectura de Derechos:** Obligatoriamente antes de entrar a comisaría deberás leerle sus derechos como detenido. Si no se hace, el detenido podrá salir sin ser procesado al pedir el Habeas Corpus.</li>
-                    </ul>
-                    <div style="background-color: #282828; padding: 15px; border-radius: 4px; margin-top: 15px; border-left: 3px solid #FFC107;">
-                        <p style="color: #FFC107; font-weight: bold; margin-bottom: 5px;">Derechos del Detenido:</p>
-                        <p style="color: #ccc; font-size: 0.9em;">
-                            Tiene usted derecho a guardar silencio, todo lo que diga podrá ser utilizado en su contra, tiene derecho a no responder a las preguntas que se le formulen y a no declararse culpable, tiene derecho a saber los delitos que se le atribuyen, tiene derecho a comida, bebida y asistencia sanitaria si fuese necesario, tiene derecho a un abogado siempre que no se le haya detenido infraganti y tiene derecho a una llamada de no más de 1 minuto en presencia de un funcionario público de la policía.
-                        </p>
+                <div class="row-flex">
+                    <div class="col-6">
+                        <div class="rule-card">
+                            <h3 class="card-title"><span class="fas fa-list-ol check-icon"></span> 2. Códigos Operacionales</h3>
+                            <ul class="list-columns list-columns-2">
+                                [cite_start]<li><strong>CÓDIGO 1:</strong> PERSECUCIÓN. [cite: 46]</li>
+                                [cite_start]<li><strong>CÓDIGO 2:</strong> TIROTEO. [cite: 47]</li>
+                                [cite_start]<li><strong>CÓDIGO 3:</strong> ATRACO. [cite: 48]</li>
+                                [cite_start]<li><strong>CÓDIGO 4:</strong> DENUNCIA EN COMISARÍA. [cite: 49]</li>
+                                [cite_start]<li><strong>CÓDIGO 5:</strong> PROCESANDO DETENIDO. [cite: 50]</li>
+                                [cite_start]<li><strong>CÓDIGO 7:</strong> MECÁNICO. [cite: 51]</li>
+                                [cite_start]<li><strong>CÓDIGO 8:</strong> EMS. [cite: 52]</li>
+                                [cite_start]<li><strong>CÓDIGO 100:</strong> Barrera policial (en persecución) [cite: 53]</li>
+                                [cite_start]<li><strong>QRR:</strong> Agente en peligro de muerte. [cite: 54]</li>
+                                [cite_start]<li><strong>PIT:</strong> Desestabilizar un vehículo (dar un ligero toque con el morro del patrulla en la parte de atrás del vehículo del sujeto que se da a la fuga) [cite: 55]</li>
+                                [cite_start]<li><strong>CLAVE ROBERT:</strong> Disparar a las ruedas. [cite: 56]</li>
+                                [cite_start]<li><strong>MODO CHARLIE:</strong> Silencio en radio. [cite: 57]</li>
+                            </ul>
+                        </div>
                     </div>
-                    <p style="color: #ccc; margin-top: 15px;">
-                        Se le deberá pedir el DNI o la maquina de huella dactilar y apuntar todo en la PDA, roleando sus correspondientes acciones. Si dice que no entendió los derechos por segunda vez, el oficial puede dar por hecho que los entendió y proceder con el proceso.
-                    </p>
-                </div>
-
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i> 7. Robos y Negociación
-                    </h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #ccc; margin-top: 15px;">
-                        <li style="margin-bottom: 10px;">Si acuden menos miembros de la LSPD o LSSD que la mínima establecida, el rol se anulará automáticamente.</li>
-                        <li style="margin-bottom: 10px;">Quedará totalmente prohibido el abuso de animaciones en cualquier tipo de rol agresivo.</li>
-                        <li style="margin-bottom: 10px;"><strong>Salida Limpia:<strong> Se considera cualquier acción destinada a interferir en el desplazamiento del atracador desde el lugar del robo hacia el vehículo de huida o durante la salida del mismo (Bloqueo, manipulación del vehículo, uso de taser).</li>
-                        <li style="margin-bottom: 10px;"><strong>Huida Limpia:<strong> Se inicia una vez que el atracador sube al vehículo, arranca, y comienza a desplazarse. A partir de este momento, no está permitido intervenir de manera agresiva (PIT, Código 100) sin haber agotado los 3 avisos, o si pone en peligro la vida de civiles, circula en contradirección por tiempo prolongado, o se introduce en áreas inaccesibles.</li>
-                        <li style="margin-bottom: 10px;"><strong>Ruptura de negociaciones:<strong> Si las negociaciones se rompen, todas las condiciones acordadas quedarán anuladas.</li>
-                    </ul>
-                </div>
-
-                <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--secondary-color);">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                        <i class="fas fa-mask" style="margin-right: 10px;"></i> 8. Secuestro
-                    </h3>
-                    <p style="color: #ccc; margin-top: 15px;">
-                        Los secuestradores deben comunicar el secuestro mediante el comando `/anon` dirigido al ID de H-50 para confirmar la disponibilidad policial.
-                    </p>
-                    <ul style="list-style: disc; padding-left: 20px; color: #ccc; margin-top: 15px;">
-                        <li style="margin-bottom: 10px;"><strong>Mínimo Civil:<strong> Al menos 3 miembros de la Policía para secuestrar a un civil.</li>
-                        <li style="margin-bottom: 10px;"><strong>Mínimo Policía:<strong> Al menos 7 miembros de la Policía para secuestrar a un policía.</li>
-                        <li style="margin-bottom: 10px;"><strong>Duración Máxima:<strong> Un secuestro no podrá prolongarse más de 40 minutos.</li>
-                        <li style="margin-bottom: 10px;">Se puede secuestrar a personal en servicio, pero debe justificarse con un motivo IC sólido.</li>
-                    </ul>
-                </div>
-
-                <div style="display: flex; gap: 40px;">
-                    <div style="flex: 1; background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
-                        <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                            <i class="fas fa-search" style="margin-right: 10px;"></i> 9. Actuaciones y Cacheo
-                        </h3>
-                        <p style="color: #ccc; margin-top: 15px;">
-                            Se debe tratar siempre a las personas con respeto y sin recurrir a insultos.
-                        </p>
-                        <p style="color: #ccc; font-weight: bold; margin-top: 15px;">Condiciones para Cachear:</p>
-                        <ul style="list-style: disc; padding-left: 20px; color: #ccc;">
-                            <li style="margin-bottom: 5px;">Cuando entre en un recinto o perímetro policial.</li>
-                            <li style="margin-bottom: 5px;">Si ha sido arrestada por cometer un delito.</li>
-                            <li style="margin-bottom: 5px;">Si ha huido de la policía.</li>
-                            <li style="margin-bottom: 5px;">Si se observa que abandona una zona sospechosa o donde se ha recibido un aviso.</li>
-                            <li style="margin-bottom: 5px;">Se podrá cachear a los pasajeros de un vehículo si existen sospechas razonables de que puedan ser cómplices.</li>
-                        </ul>
+                    
+                    <div class="col-6">
+                        <div class="rule-card">
+                            <h3 class="card-title"><span class="fas fa-broadcast-tower check-icon"></span> 3. Códigos de Radio 10-X</h3>
+                            <ul class="list-columns list-columns-3">
+                                [cite_start]<li><strong>10-0:</strong> Agente Abatido [cite: 59]</li>
+                                [cite_start]<li><strong>10-3:</strong> Precaución [cite: 60]</li>
+                                [cite_start]<li><strong>10-4:</strong> Afirmativo [cite: 61]</li>
+                                [cite_start]<li><strong>10-5:</strong> Negativo [cite: 62]</li>
+                                [cite_start]<li><strong>10-6:</strong> Ocupados [cite: 63]</li>
+                                [cite_start]<li><strong>10-7:</strong> Disponible [cite: 64]</li>
+                                [cite_start]<li><strong>10-8:</strong> Vuelta a comisaría [cite: 65]</li>
+                                [cite_start]<li><strong>10-9:</strong> Mandar a repetir lo que se dijo en Radio [cite: 66]</li>
+                                [cite_start]<li><strong>10-10:</strong> Abandonó el servicio [cite: 67]</li>
+                                [cite_start]<li><strong>10-15:</strong> Persona enmascarada [cite: 68]</li>
+                                [cite_start]<li><strong>10-20:</strong> Posición actual del agente [cite: 69]</li>
+                                [cite_start]<li><strong>10-32:</strong> Necesito refuerzos [cite: 70]</li>
+                                [cite_start]<li><strong>10-33:</strong> Patrullando [cite: 71]</li>
+                                [cite_start]<li><strong>10-35:</strong> Comprobación de radio [cite: 72]</li>
+                                [cite_start]<li><strong>10-37:</strong> Solicitar grúa [cite: 73]</li>
+                                [cite_start]<li><strong>10-38:</strong> Solicitar Ambulancia [cite: 74]</li>
+                                [cite_start]<li><strong>10-42:</strong> Zona despejada [cite: 75]</li>
+                                [cite_start]<li><strong>10-55:</strong> Falsa alarma [cite: 76]</li>
+                                [cite_start]<li><strong>10-97:</strong> En camino [cite: 77]</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
 
-                    <div style="flex: 1; background-color: var(--card-background); padding: 30px; border-radius: 8px; border-left: 5px solid var(--secondary-color);">
-                        <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                            <i class="fas fa-balance-scale" style="margin-right: 10px;"></i> 11. FairPlay
-                        </h3>
-                        <p style="color: #ccc; margin-top: 15px;">
-                            Se espera que todos los usuarios actúen de buena fe, evitando conflictos innecesarios y no aprovechando vacíos en las normativas, respetando el "espíritu" de la norma.
-                        </p>
-                        <p style="color: #ccc; font-weight: bold; margin-top: 15px;">Normas QRR y Condena:</p>
-                        <ul style="list-style: disc; padding-left: 20px; color: #ccc;">
-                            <li style="margin-bottom: 5px;"><strong>QRR:<strong> Solo debe activarse cuando un agente esté en peligro crítico (no durante un robo, o estando inconsciente o apuntado).</li>
-                            <li style="margin-bottom: 5px;">La vida del compañero tiene prioridad; siempre dar preferencia al QRR.</li>
-                            <li style="margin-bottom: 5px;">Si un detenido paga la multa o se entrega, se reducirá a la mitad la condena si esta excede los 20 meses.</li>
+                <div class="rule-card">
+                    <h3 class="card-title"><span class="fas fa-sign-in-alt check-icon"></span> 4. Cómo entrar de servicio</h3>
+                    <ul class="list-ordered">
+                        [cite_start]<li><strong>Fichar en Discord:</strong> Registra tu entrada en el canal correspondiente en horario español peninsular. [cite: 84]</li>
+                        [cite_start]<li><strong>Preparar Equipo:</strong> Recoge armas reglamentarias (taser, porra, pistola y SMG) y uniforme. [cite: 85]</li>
+                        <li><strong>Notificar al H-50:</strong> Informa por radio tu disponibilidad. [cite_start]Ejemplo: "H-50 aquí Cadete Pepe Pérez, esperando asignación." [cite: 86]</li>
+                        <li><strong>Asignación de Referencia:</strong> El H-50 te dará una referencia; [cite_start]únete a su radio interna y coordina con tu unidad. [cite: 87]</li>
+                        [cite_start]<li><strong>Comprobación:</strong> Verifica equipo, radio en frecuencia correcta y vehículo en buen estado antes de salir a patrullar. [cite: 88]</li>
+                        [cite_start]<li><strong>Sin H-50:</strong> Si no hay H-50, consulta con el oficial de mayor rango o espera instrucciones, en casos generales te colocas como H-50. [cite: 89]</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <h3 class="card-title"><span class="fas fa-gun check-icon"></span> 5. Armamento</h3>
+                    <ul class="list-bullet">
+                        [cite_start]<li><strong>Armamento Reglamentario:</strong> Taser, Porra, Pistola reglamentaria, SMG, 3 chalecos (uno puesto y dos encima) y entre 70 y 100 balas. [cite: 91]</li>
+                        [cite_start]<li><strong>Armamento Fuera de Servicio:</strong> El armamento que debemos llevar fuera de servicio será la Pistola Legal (9mm). [cite: 92]</li>
+                        [cite_start]<li><strong>Armamento en Alerta III:</strong> Sustituimos la SMG por la Carabina. [cite: 93]</li>
+                        [cite_start]<li><strong>Armamento para Divisiones:</strong> Cada división tendrá su armamento reglamentario privado, estas armas son: SMG, SMG de Combate, Escopeta, Rifle Avanzado, Carabina Especial, Rifles, Francotirador y Francotirador Pesado. [cite: 94] [cite_start]Cada arma tiene que estar nivelada con la situación. [cite: 95]</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <h3 class="card-title"><span class="fas fa-handcuffs check-icon"></span> 6. Cómo procesar a un detenido</h3>
+                    <ul class="list-bullet">
+                        [cite_start]<li>Deberás usar el `/me` y el `/do`. ej: `/do cachea al sujeto y le retira "lo que le quites"`. [cite: 97]</li>
+                        [cite_start]<li>A la hora de hacer cualquier acción será obligatorio tener las manos libres (No tener el arma en la mano, como mucho la pistola). [cite: 98]</li>
+                    </ul>
+                    
+                    <div class="warning-box">
+                        <p class="warning-title"><strong>Lectura de Derechos (Habeas Corpus)</strong></p>
+                        <ul class="list-unstyled">
+                            [cite_start]<li><i class="cross-icon fas fa-exclamation-triangle"></i> Obligatoriamente antes de entrar a comisaría deberás leerle sus derechos como detenido, si no se podrá salir sin ser procesado al pedir el Habeas Corpus. [cite: 103]</li>
+                            [cite_start]<li><i class="check-icon fas fa-volume-up"></i> <strong>Derechos:</strong> Tiene usted derecho a guardar silencio, todo lo que diga podrá ser utilizado en su contra, tiene derecho a no responder a las preguntas que se le formulen y a no declararse culpable, tiene derecho a saber los delitos que se le atribuyen, tiene derecho a comida, bebida y asistencia sanitaria si fuese necesario. [cite: 104]</li>
+                            [cite_start]<li><i class="check-icon fas fa-user-secret"></i> Tiene derecho a un abogado siempre que no se le haya detenido infraganti y tiene derecho a una llamada de no más de 1 minuto en presencia de una funcionario público de la policía. [cite: 104]</li>
+                            [cite_start]<li><i class="check-icon fas fa-id-card"></i> Se le deberá pedir el DNI o la maquina de huella dactilar en su defecto y apuntar todo en la PDA todo esto roleando sus correspondientes acciones. [cite: 106]</li>
                         </ul>
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 60px; padding: 30px; border: 1px dashed var(--primary-color); border-radius: 8px;">
-                    <h3 style="color: var(--text-light); margin-bottom: 15px;"><i class="fas fa-bell" style="margin-right: 10px;"></i> 10. Alertas</h3>
-                    <p style="color: #ccc; margin-bottom: 25px;">
-                        Toda la normativa relacionada a las alertas se podrá encontrar en el GitBook Oficial de Regidos RP.
-                    </p>
-                    <p style="color: #ccc; font-size: 0.9em; font-style: italic;">
-                        Firmado por: Director Lorenzo Moretti, Encargado de Los Santos Sheriff Dpt.
-                    </p>
+                <div class="row-flex">
+                    <div class="col-6">
+                        <div class="rule-card">
+                            <h3 class="card-title"><span class="fas fa-money-bill-wave check-icon"></span> 7. Robos y Negociación</h3>
+                            <ul class="list-bullet">
+                                [cite_start]<li>En caso de que acudan menos miembros de la LSPD o LSSD que la mínima establecida en la normativa el rol se anulará automáticamente. [cite: 108]</li>
+                                [cite_start]<li>Quedará totalmente prohibido el abuso de animaciones en cualquier tipo de rol agresivo. [cite: 109]</li>
+                                [cite_start]<li><strong>Salida Limpia:</strong> Se considera una "salida limpia" cualquier acción destinada a interferir en el desplazamiento del atracador desde el lugar del robo hacia el vehículo de huida o durante la salida del mismo. [cite: 112, 113] [cite_start]Esto incluye: Bloqueo, manipulación del vehículo, uso de taser. [cite: 115, 116]</li>
+                                [cite_start]<li><strong>Huida Limpia:</strong> Se inicia una vez que el atracador sube al vehículo de huida, arranca, y comienza a desplazarse. [cite: 123] [cite_start]No está permitido intervenir de manera agresiva (usando códigos como Robert, PIT o Código 100) sin haber cumplido las siguientes condiciones: Agotar los 3 avisos, [cite: 125] [cite_start]Cuando el atracador pone en peligro la vida de civiles, [cite: 126] [cite_start]Circula en contradirección por un tiempo prolongado, [cite: 126] [cite_start]Se introduce en callejones o áreas inaccesibles para el coche patrulla. [cite: 127]</li>
+                                [cite_start]<li><strong>Ruptura de negociaciones:</strong> Si las negociaciones se rompen en cualquier momento, todas las condiciones acordadas quedarán anuladas. [cite: 136]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="rule-card">
+                            <h3 class="card-title"><span class="fas fa-user-lock check-icon"></span> 8. Secuestro</h3>
+                            [cite_start]<p class="card-text">Los secuestradores deben comunicar el secuestro mediante el comando `/anon` dirigido al id de H-50, para confirmar la disponibilidad de policías necesarios para el rol. [cite: 141]</p>
+                            <ul class="list-bullet">
+                                [cite_start]<li><strong>Mínimo Civil:</strong> Al menos 3 miembros de la Policía para secuestrar a un civil. [cite: 143]</li>
+                                [cite_start]<li><strong>Mínimo Policía:</strong> Al menos 7 miembros de la Policía para secuestrar a un policía. [cite: 144]</li>
+                                [cite_start]<li><strong>Duración Máxima:</strong> Un secuestro no podrá prolongarse más de 40 minutos. [cite: 145]</li>
+                                [cite_start]<li>Se puede secuestrar a personal en servicio, pero debe justificarse con un motivo IC sólido. [cite: 150]</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="row-flex">
+                    <div class="col-6">
+                        <div class="rule-card">
+                            <h3 class="card-title"><span class="fas fa-search check-icon"></span> 9. Actuaciones y Cacheo</h3>
+                            [cite_start]<p class="card-text">Se debe tratar siempre a las personas con respeto y sin recurrir a insultos. [cite: 154]</p>
+                            <p class="card-subtitle">Condiciones para cachear a una persona:</p>
+                            <ul class="list-bullet">
+                                [cite_start]<li>Cuando entre en un recinto o perímetro policial. [cite: 157]</li>
+                                [cite_start]<li>Si ha sido arrestada por cometer un delito. [cite: 158]</li>
+                                [cite_start]<li>Si ha huido de la policía. [cite: 159]</li>
+                                [cite_start]<li>Si se observa que abandona una zona conocida por la comisión de actos ilegales o una zona donde previamente se ha recibido un aviso (entorno sospechoso). [cite: 160]</li>
+                                [cite_start]<li>Se podrá cachear a los pasajeros de un vehículo si existen sospechas razonables de que puedan ser cómplices de un delito. [cite: 162]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="rule-card">
+                            <h3 class="card-title"><span class="fas fa-balance-scale check-icon"></span> 11. FairPlay</h3>
+                            <p class="card-text">Se espera que todos los usuarios, miembros o participantes actúen de buena fe, evitando conflictos innecesarios y resolviendo disputas de manera pacífica. [cite_start]No se debe aprovechar vacíos en las normativas, mecánicas, reglas o procedimientos (tanto IC como OOC). [cite: 166, 167]</p>
+                            <ul class="list-bullet">
+                                [cite_start]<li>Cada normativa y mecánica tiene una intención (el <strong>"espíritu"</strong> de la misma), y debe respetarse tanto como el texto escrito. [cite: 168]</li>
+                                [cite_start]<li>Cualquier intento de <strong>"saltarse el espíritu"</strong> de las normativas será considerado una infracción del FairPlay. [cite: 170]</li>
+                                [cite_start]<li><strong>QRR (Alerta crítica para agentes):</strong> La clave QRR debe activarse solo cuando un agente esté en peligro crítico. [cite: 178]</li>
+                                [cite_start]<li><strong>Prohibido QRR:</strong> Está completamente PROHIBIDO tirar QRR estando inconsciente o en un momento en el cual te estén apuntando. [cite: 188]</li>
+                                [cite_start]<li>Al activarse el QRR, se debe cancelar cualquier otra situación en curso y acudir inmediatamente al lugar de la alerta, dándole prioridad, incluso si se está ocupado en otra situación como un código 1. [cite: 179, 180, 183]</li>
+                                [cite_start]<li><strong>Prohibido:</strong> Activar un QRR durante un robo. [cite: 181]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <p class="info-title"><strong>Documento de Cumplimiento Obligatorio</strong></p>
+                    <p class="info-text">El cumplimiento estricto de esta normativa es fundamental para la coherencia y profesionalidad del rol en Regidos RP.</p>
+                    [cite_start]<p class="info-signature">Att: Director Lorenzo Moretti, Encargado de Los Santos Sheriff Dpt. [cite: 191]</p>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Departamento del Sheriff de Regidos. Todos los derechos reservados.</p>
-    </footer>
+        </footer>
 </body>
+</html>
