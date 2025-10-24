@@ -54,8 +54,8 @@ h2 {
 
 main {
     /* CORRECCIÓN CLAVE: Empujar el contenido principal hacia abajo para que no quede
-       oculto detrás del encabezado fijo. */
-    padding-top: 100px; /* Ajusta este valor si la altura de tu navbar cambia */
+       oculto detrás del navbar fijo. Ajustado a 90px (altura aproximada del navbar). */
+    padding-top: 90px; 
     background-color: var(--background-color);
     color: var(--text-light);
     min-height: 100vh;
@@ -68,18 +68,13 @@ main {
     min-height: 400px;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: relative; 
 }
 
-/* ESTILOS DE ENCABEZADO FIJO */
+/* ESTILOS DE ENCABEZADO FIJO para páginas internas (solo la imagen) */
 .hero.small-hero {
-    height: 250px; /* Altura más corta para páginas internas */
-    /* PROPIEDADES CLAVE: Fijar el encabezado completo */
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%;
-    z-index: 1000; /* Asegura que esté por encima de todo */
+    height: 250px; 
+    /* El hero se desplaza con el scroll, solo el navbar es fijo */
 }
 
 .hero-overlay {
@@ -97,10 +92,16 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    width: 100%; /* El navbar dentro del hero fijo ya está al 100% de ancho */
-    position: relative; /* Para que los elementos dentro de .navbar usen esta posición */
-    z-index: 10; 
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo para que el texto sea legible */
+    
+    /* PROPIEDADES CLAVE: Ahora SÓLO el navbar es fijo */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+
+    /* Usamos un color sólido para que la barra se vea bien al hacer scroll */
+    background-color: #1a1a1a; 
     backdrop-filter: blur(5px);
     border-bottom: 2px solid var(--primary-color);
 }
@@ -148,7 +149,8 @@ main {
 /* --- CONTENIDO PRINCIPAL DEL HERO (Textos) --- */
 .hero-content {
     position: absolute;
-    top: 50%;
+    /* Ajusta el top para centrar el contenido debajo del navbar fijo */
+    top: calc(50% + 45px); /* 50% + (mitad de la altura del navbar, aprox.) */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
