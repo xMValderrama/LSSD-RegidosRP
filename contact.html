@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Departamento del Sheriff de REGIDOS</title>
-    <link rel="icon" type="image/x-icon" href="/LSSD-RegidosRP/favicon.ico">
-    <link rel="stylesheet" href="/LSSD-RegidosRP/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -16,14 +16,15 @@
         <div class="hero-overlay"></div>
         <nav class="navbar">
             <div class="logo"><img src="logo.png" alt="Logo LSSD Regidos" style="height: 50px; width: auto;"></div>
-            <ul class="nav-links">
-                <li><a href="/LSSD-RegidosRP/index.html">Inicio</a></li> 
-                <li><a href="/LSSD-RegidosRP/about.html">Nosotros</a></li>
-                <li><a href="/LSSD-RegidosRP/ranks.html">Rangos</a></li>
-                <li><a href="/LSSD-RegidosRP/rules.html">Normativa</a></li>
-                <li><a href="/LSSD-RegidosRP/recruitment.html">Reclutamiento</a></li>
-                <li><a href="/LSSD-RegidosRP/contact.html">Contacto</a></li> 
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="ranks.html">Rangos</a></li>
+                <li><a href="rules.html">Normativa</a></li>
+                <li><a href="recruitment.html">Reclutamiento</a></li>
+                <li><a href="contact.html">Contacto</a></li> 
             </ul>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
         </nav>
         <div class="hero-content">
             <h1>CONTACTA AL DEPARTAMENTO</h1>
@@ -32,7 +33,7 @@
     </header>
 
     <main>
-        <section class="container content-section" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
+        <section class="container content-section" style="padding: 60px 20px;">
             <h2 style="color: var(--primary-color);">Comunícate con Nosotros</h2>
             
             <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; color: #ccc;">
@@ -41,16 +42,16 @@
 
             <div class="contact-info-grid" style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px; margin-bottom: 60px;">
                 
-                <div class="contact-card" style="flex: 1 1 300px; background-color: var(--card-background); padding: 30px; border-radius: 8px; text-align: center; border-bottom: 5px solid var(--primary-color);">
+                <div class="contact-card rule-box-primary" style="flex: 1 1 300px; padding: 30px; border-radius: 8px; text-align: center; border-bottom: 5px solid var(--primary-color);">
                     <i class="fab fa-discord fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
                     <h3 style="color: var(--text-light); margin-top: 0;">Soporte OOC y Comunidad</h3>
                     <p style="color: #ccc;">Únete a nuestro servidor oficial para soporte, preguntas sobre reclutamiento o interacción con la comunidad.</p>
-                    <a href="#" class="btn btn-secondary" style="margin-top: 15px;">
+                    <a href="https://discord.gg/WcPqccW2y4" class="btn btn-secondary" style="margin-top: 15px;">
                         <i class="fas fa-arrow-right"></i> ENLACE DISCORD
                     </a>
                 </div>
 
-                <div class="contact-card" style="flex: 1 1 300px; background-color: var(--card-background); padding: 30px; border-radius: 8px; text-align: center; border-bottom: 5px solid var(--secondary-color);">
+                <div class="contact-card rule-box-secondary" style="flex: 1 1 300px; padding: 30px; border-radius: 8px; text-align: center; border-bottom: 5px solid var(--secondary-color);">
                     <i class="fas fa-envelope fa-3x" style="color: var(--secondary-color); margin-bottom: 15px;"></i>
                     <h3 style="color: var(--text-light); margin-top: 0;">Contacto de Jefatura (OOC)</h3>
                     <p style="color: #ccc;">Para asuntos administrativos serios o preguntas directas a la Dirección del Departamento.</p>
@@ -74,5 +75,10 @@
     <footer>
         <p>&copy; 2024 Departamento del Sheriff de Regidos. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        document.getElementById('menuToggle').onclick = function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
