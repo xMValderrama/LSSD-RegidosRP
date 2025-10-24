@@ -203,90 +203,6 @@ footer {
     margin-top: 5px;
 }
 
-/* --- ESTILOS DE ESTRUCTURA FLEXIBLES (Reemplaza CSS Inline) --- */
-
-/* Estilos de Contenido General (Aplicable a rules, about, recruitment) */
-.content-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-/* Estructura de Dos Columnas (Usada en about.html y rules.html) */
-.two-columns {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-top: 40px;
-}
-
-.main-content-col {
-    flex: 2;
-    padding: 20px;
-    background-color: var(--card-background);
-    border-radius: 8px;
-}
-
-.sidebar-content-col {
-    flex: 1;
-    padding: 0;
-}
-
-/* Estilos para Cajas de Reglas/Secciones */
-.rule-box {
-    background-color: var(--card-background);
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 40px; /* Para reglas que van apiladas */
-}
-
-/* Variante de la caja para énfasis/separación */
-.rule-box-primary {
-    border-left: 5px solid var(--primary-color);
-}
-
-.rule-box-secondary {
-    border-left: 5px solid var(--secondary-color);
-}
-
-.rule-box h3 {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-}
-
-.rule-box ul, .rule-box ol {
-    margin-top: 15px;
-}
-
-.rule-box ul li {
-    margin-bottom: 10px;
-    color: #ccc;
-}
-
-.rule-box ul.columns-3 {
-    columns: 3;
-    list-style: none;
-    padding: 0;
-}
-
-.rule-box ul.columns-2 {
-    columns: 2;
-    list-style: none;
-    padding: 0;
-}
-
-/* Estilo para el recuadro de derechos del detenido */
-.detainee-rights {
-    background-color: #282828; 
-    padding: 15px; 
-    border-radius: 4px; 
-    margin-top: 15px; 
-    border-left: 3px solid #FFC107;
-}
-
-
 /* --- ESTILOS ADICIONALES PARA RANGOS (ranks.html) --- */
 
 .rank-accordion {
@@ -359,16 +275,6 @@ footer {
 }
 
 /* --- RESPONSIVE DESIGN (Ajustes para móviles) --- */
-
-/* Botón de menú para móvil */
-.menu-toggle {
-    display: none; 
-    font-size: 1.5em;
-    color: var(--text-light);
-    cursor: pointer;
-    z-index: 11;
-}
-
 @media (max-width: 768px) {
     .hero {
         height: 60vh;
@@ -378,68 +284,20 @@ footer {
         font-size: 2.5em;
     }
     
+    .nav-links {
+        display: none; /* Ocultar en móviles por simplicidad */
+    }
+
     .hero-content p {
         font-size: 1.1em;
     }
     
-    /* Mostrar botón de menú */
-    .menu-toggle {
-        display: block;
-    }
-    
-    /* Ocultar menú principal y prepararlo para desplegable */
-    .nav-links {
-        display: none; 
+    /* Para about.html */
+    div[style*="display: flex"] {
         flex-direction: column;
-        position: absolute;
-        top: 80px; /* Debajo de la navbar */
-        right: 0;
-        background-color: var(--background-dark);
-        border: 1px solid var(--border-color);
-        width: 250px;
-        padding: 20px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        z-index: 9;
-    }
-
-    /* Mostrar menú al estar activo (se maneja con JS) */
-    .nav-links.active {
-        display: flex;
     }
     
-    .nav-links li {
-        margin: 10px 0;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 5px;
-    }
-    
-    .nav-links a {
-        display: block;
-        padding: 10px 0;
-    }
-
-    /* Columnas a fila única en móvil */
-    .two-columns, .contact-info-grid, .recruitment-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .main-content-col, .sidebar-content-col {
-        flex: auto; /* Restablecer el flex */
-        width: 100%;
-        padding: 15px;
-    }
-    
-    .rule-box-primary, .rule-box-secondary {
-        margin-bottom: 20px;
-    }
-    
-    .rule-box ul.columns-3, .rule-box ul.columns-2 {
-        columns: 1; /* Volver a una columna */
-    }
-
-    /* Para about.html, si se usa el contenedor principal */
-    .content-wrapper {
-        gap: 20px;
+    div[style*="flex: 1"], div[style*="flex: 2"] {
+        width: 100% !important;
     }
 }
