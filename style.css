@@ -54,32 +54,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* --- ANIMACIONES GLOBALES --- */
-/* 1. Keyframes para el efecto de aparición */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 2. Keyframes para el efecto de brillo del botón principal */
-@keyframes glowing {
-    0% { box-shadow: 0 0 5px var(--primary-color); }
-    50% { box-shadow: 0 0 20px var(--primary-color), 0 0 10px var(--secondary-color); }
-    100% { box-shadow: 0 0 5px var(--primary-color); }
-}
-
-/* Aplicar la animación de aparición a las secciones de contenido */
-main section, footer {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* Aplicar retrasos para que aparezcan en secuencia */
-main section:nth-child(1) { animation-delay: 0.3s; }
-main section:nth-child(2) { animation-delay: 0.6s; }
-footer { animation-delay: 0.9s; }
-
-
 /* --- ESTILOS DE BOTONES --- */
 .btn {
     display: inline-block;
@@ -87,8 +61,7 @@ footer { animation-delay: 0.9s; }
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    position: relative; /* Necesario para la sombra y el brillo */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-primary {
@@ -100,11 +73,6 @@ footer { animation-delay: 0.9s; }
 .btn-primary:hover {
     background-color: #927129; /* Tono más oscuro al hacer hover */
     transform: translateY(-2px);
-}
-
-/* Aplicar animación de brillo al botón principal de CTA */
-.btn-cta-glowing {
-    animation: glowing 2s infinite;
 }
 
 .btn-secondary {
@@ -129,9 +97,6 @@ footer { animation-delay: 0.9s; }
     justify-content: space-between;
     position: relative;
     text-align: center;
-    /* Efecto Parallax Sutil: la imagen se moverá muy ligeramente en el scroll */
-    background-attachment: fixed;
-    transition: background-position 0.5s ease-out; 
 }
 
 /* Ajuste para páginas interiores (hace el encabezado más pequeño) */
@@ -162,18 +127,6 @@ footer { animation-delay: 0.9s; }
     z-index: 10;
 }
 
-/* Estilo para la imagen del logo (para que se vea) */
-.logo img {
-    height: 50px; 
-    width: auto;
-    /* Animación sutil al pasar el ratón sobre el logo */
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05) rotate(-3deg);
-}
-
 .logo {
     font-size: 1.8em;
     font-weight: 700;
@@ -192,7 +145,6 @@ footer { animation-delay: 0.9s; }
     color: var(--text-light);
     font-weight: 500;
     padding: 5px 10px;
-    transition: color 0.3s, border-bottom 0.3s;
 }
 
 .nav-links a:hover {
@@ -236,12 +188,6 @@ footer {
     border-radius: 6px;
     margin-bottom: 15px;
     border-bottom: 3px solid var(--secondary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para interactividad */
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .value-card strong {
@@ -294,11 +240,6 @@ footer {
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 40px; /* Para reglas que van apiladas */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.rule-box:hover {
-    box-shadow: 0 0 15px rgba(163, 126, 47, 0.2); /* Sombra sutil al pasar el ratón */
 }
 
 /* Variante de la caja para énfasis/separación */
@@ -360,12 +301,11 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
 .rank-item:hover {
     background-color: #282828; 
-    transform: scale(1.01); /* Efecto sutil al pasar el ratón */
 }
 
 .rank-header {
@@ -432,7 +372,6 @@ footer {
 @media (max-width: 768px) {
     .hero {
         height: 60vh;
-        background-attachment: scroll; /* Desactivar parallax en móvil */
     }
 
     .hero-content h1 {
