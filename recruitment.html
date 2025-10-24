@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reclutamiento | Departamento del Sheriff de REGIDOS</title>
-    <link rel="icon" type="image/x-icon" href="/LSSD-RegidosRP/favicon.ico">
-    <link rel="stylesheet" href="/LSSD-RegidosRP/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -16,50 +16,51 @@
         <div class="hero-overlay"></div>
         <nav class="navbar">
             <div class="logo"><img src="logo.png" alt="Logo LSSD Regidos" style="height: 50px; width: auto;"></div>
-            <ul class="nav-links">
-                <li><a href="/LSSD-RegidosRP/index.html">Inicio</a></li> 
-                <li><a href="/LSSD-RegidosRP/about.html">Nosotros</a></li>
-                <li><a href="/LSSD-RegidosRP/ranks.html">Rangos</a></li>
-                <li><a href="/LSSD-RegidosRP/rules.html">Normativa</a></li>
-                <li><a href="/LSSD-RegidosRP/recruitment.html">Reclutamiento</a></li>
-                <li><a href="/LSSD-RegidosRP/contact.html">Contacto</a></li> 
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="ranks.html">Rangos</a></li>
+                <li><a href="rules.html">Normativa</a></li>
+                <li><a href="recruitment.html">Reclutamiento</a></li>
+                <li><a href="contact.html">Contacto</a></li> 
             </ul>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
         </nav>
         <div class="hero-content">
             <h1>ÚNETE A NUESTRAS FILAS</h1>
-            <p style="font-size: 1.2em;">Comienza tu carrera como Deputy Sheriff del Condado de Regidos.</p>
+            <p style="font-size: 1.2em;">Comienza tu carrera como Deputy Sheriff del Condado de Blaine.</p>
         </div>
     </header>
 
     <main>
-        <section class="container content-section" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
+        <section class="container content-section" style="padding: 60px 20px;">
             <h2 style="color: var(--primary-color);">Proceso de Postulación y Requisitos</h2>
             
             <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; color: #ccc;">
                 Buscamos individuos con un fuerte compromiso con el Roleplay serio, la disciplina y el servicio a la comunidad. Si cumples con los requisitos, te invitamos a iniciar tu proceso de ingreso.
             </p>
 
-            <div class="recruitment-grid" style="display: flex; gap: 40px; margin-bottom: 50px;">
+            <div class="two-columns recruitment-grid" style="margin-top: 0; align-items: stretch;">
                 
-                <div class="req-section" style="flex: 1; background-color: var(--card-background); padding: 30px; border-radius: 8px; border-top: 5px solid var(--primary-color);">
+                <div class="rule-box rule-box-primary">
                     <h3 style="color: var(--primary-color); margin-top: 0;"><i class="fas fa-list-check" style="margin-right: 10px;"></i> Requisitos Fundamentales</h3>
                     <ul style="list-style: none; padding: 0; margin-top: 15px;">
-                        <li class="req-item" style="margin-bottom: 15px; color: #ccc; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px;">
+                        <li style="margin-bottom: 15px; color: #ccc; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px;">
                             <i class="fas fa-user-check" style="color: var(--secondary-color); margin-right: 10px;"></i> <strong>Edad Mínima:</strong> Ser mayor de 18 años (OOC) o cumplir con el requisito de edad del servidor.
                         </li>
-                        <li class="req-item" style="margin-bottom: 15px; color: #ccc; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px;">
+                        <li style="margin-bottom: 15px; color: #ccc; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px;">
                             <i class="fas fa-microphone-alt" style="color: var(--secondary-color); margin-right: 10px;"></i> <strong>Comunicación:</strong> Poseer un micrófono funcional y capacidad para usar Discord.
                         </li>
-                        <li class="req-item" style="margin-bottom: 15px; color: #ccc; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px;">
+                        <li style="margin-bottom: 15px; color: #ccc; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px;">
                             <i class="fas fa-book-reader" style="color: var(--secondary-color); margin-right: 10px;"></i> <strong>Conocimiento:</strong> Haber leído y entendido la normativa general y el código de conducta de LSSD.
                         </li>
-                        <li class="req-item" style="margin-bottom: 15px; color: #ccc; padding-bottom: 10px;">
+                        <li style="margin-bottom: 15px; color: #ccc; padding-bottom: 10px;">
                             <i class="fas fa-clock" style="color: var(--secondary-color); margin-right: 10px;"></i> <strong>Compromiso:</strong> Disponibilidad para cumplir con un mínimo de horas de servicio (a especificar en la Academia).
                         </li>
                     </ul>
                 </div>
 
-                <div class="process-section" style="flex: 1; background-color: var(--card-background); padding: 30px; border-radius: 8px; border-top: 5px solid var(--secondary-color);">
+                <div class="rule-box rule-box-secondary">
                     <h3 style="color: var(--primary-color); margin-top: 0;"><i class="fas fa-route" style="margin-right: 10px;"></i> Pasos de la Postulación</h3>
                     <ol style="list-style: decimal; padding-left: 20px; color: #ccc; margin-top: 15px;">
                         <li style="margin-bottom: 10px;"><strong>Envía el Formulario:</strong> Completa nuestro formulario oficial de postulación (enlace en el botón inferior).</li>
@@ -72,7 +73,7 @@
 
             <div style="text-align: center; margin-top: 40px;">
                 <h3 style="color: var(--text-light); margin-bottom: 20px;">¿Listo para servir y proteger?</h3>
-                <a href="#" class="btn btn-primary" style="font-size: 1.1em; padding: 15px 40px; border-radius: 50px;">
+                <a href="https://discord.gg/WcPqccW2y4" class="btn btn-primary" style="font-size: 1.1em; padding: 15px 40px; border-radius: 50px;">
                     <i class="fab fa-discord" style="margin-right: 10px;"></i> ENVIAR SOLICITUD DE INGRESO
                 </a>
                 <p style="margin-top: 20px; font-size: 0.9em; color: #777;">*Todas las solicitudes se revisan semanalmente por el equipo de Reclutamiento.</p>
@@ -84,5 +85,10 @@
     <footer>
         <p>&copy; 2024 Departamento del Sheriff de Regidos. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        document.getElementById('menuToggle').onclick = function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
