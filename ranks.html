@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rangos | Departamento del Sheriff de REGIDOS</title>
-    <link rel="icon" type="image/x-icon" href="/LSSD-RegidosRP/favicon.ico">
-    <link rel="stylesheet" href="/LSSD-RegidosRP/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -16,142 +16,166 @@
         <div class="hero-overlay"></div>
         <nav class="navbar">
             <div class="logo"><img src="logo.png" alt="Logo LSSD Regidos" style="height: 50px; width: auto;"></div>
-            <ul class="nav-links">
-                <li><a href="/LSSD-RegidosRP/index.html">Inicio</a></li> 
-                <li><a href="/LSSD-RegidosRP/about.html">Nosotros</a></li>
-                <li><a href="/LSSD-RegidosRP/ranks.html">Rangos</a></li>
-                <li><a href="/LSSD-RegidosRP/rules.html">Normativa</a></li>
-                <li><a href="/LSSD-RegidosRP/recruitment.html">Reclutamiento</a></li>
-                <li><a href="/LSSD-RegidosRP/contact.html">Contacto</a></li> 
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="ranks.html">Rangos</a></li>
+                <li><a href="rules.html">Normativa</a></li>
+                <li><a href="recruitment.html">Reclutamiento</a></li>
+                <li><a href="contact.html">Contacto</a></li> 
             </ul>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
         </nav>
         <div class="hero-content">
             <h1>ESTRUCTURA DE RANGOS</h1>
-            <p style="font-size: 1.2em;">Jerarquía y funciones dentro del Departamento del Sheriff.</p>
+            <p style="font-size: 1.2em;">Conoce la jerarquía y las responsabilidades dentro del Departamento.</p>
         </div>
     </header>
 
     <main>
-        <section class="container content-section">
-            <h2 style="color: var(--primary-color);">Jerarquía y Desarrollo Profesional</h2>
-            
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
-                La estructura de rangos del Departamento del Sheriff de Regidos está diseñada para garantizar una cadena de mando clara, fomentar el desarrollo profesional continuo y reconocer la experiencia y el compromiso de nuestros miembros. Cada nivel conlleva mayores responsabilidades operacionales y administrativas.
+        <section class="container content-section" style="padding: 60px 20px;">
+            <h2>Jerarquía y Roles Operativos</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; color: #ccc;">
+                El LSSD se organiza jerárquicamente para garantizar una cadena de mando clara y eficiente, esencial para las operaciones en el Condado de Blaine.
             </p>
 
             <div class="rank-accordion">
-
                 <div class="rank-item">
-                    <div class="rank-header" onclick="toggleRank(this)">
-                        <span><i class="fas fa-crown" style="margin-right: 15px;"></i> ALTA DIRECCIÓN</span>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="rank-header" data-target="content-1">
+                        DEPUTY TRAINEE (CADETE) <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="rank-content">
-                        <p>Esta escala constituye el liderazgo supremo del Departamento. Responsables de la estrategia, la visión y la toma de decisiones críticas, ejerciendo la máxima autoridad ejecutiva y operativa sobre todas las unidades.</p>
+                    <div class="rank-content" id="content-1">
+                        <p><strong>Descripción:</strong> Aspirantes en fase de formación. Deben superar exámenes teóricos y prácticos para ser considerados agentes de pleno derecho. Su rol es aprender y observar.</p>
+                        <strong>Funciones:</strong>
                         <ul>
-                            <li><strong>SHERIFF:</strong> Director del Departamento. Máxima autoridad. (Máx. 1)</li>
-                            <li><strong>UNDERSHERIFF:</strong> Subdirector. Segundo al mando, responsable de la gestión diaria y la coordinación general. (Máx. 1)</li>
+                            <li>Asistir a todas las clases de la Academia.</li>
+                            <li>Patrullar bajo supervisión directa de un FTO (Field Training Officer).</li>
+                            <li>No portar armas reglamentarias superiores a la pistola.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="rank-item">
-                    <div class="rank-header" onclick="toggleRank(this)">
-                        <span><i class="fas fa-sitemap" style="margin-right: 15px;"></i> ESCALA JEFATURA</span>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="rank-header" data-target="content-2">
+                        JUNIOR DEPUTY <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="rank-content">
-                        <p>Oficiales que conforman el cuerpo de Jefatura. Encargados de la ejecución de estrategias, la supervisión de divisiones completas y el manejo de grandes eventos o crisis. Son líderes administrativos y de campo de alto nivel.</p>
+                    <div class="rank-content" id="content-2">
+                        <p><strong>Descripción:</strong> Agentes recién graduados. Patrullan de forma independiente y comienzan a manejar situaciones de bajo riesgo. Su rol es ganar experiencia operativa.</p>
+                        <strong>Funciones:</strong>
                         <ul>
-                            <li><strong>HIGH MARSHAL:</strong> Máxima autoridad de gestión en campo, responsable de unidades especiales. (Máx. 1)</li>
-                            <li><strong>COMMANDANT:</strong> Responsable de la coordinación de grandes turnos y la logística departamental. (Máx. 2)</li>
-                            <li><strong>WARDEN GENERAL:</strong> Enfoque en supervisión de grandes unidades y operaciones específicas. (Máx. 2)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="rank-item">
-                    <div class="rank-header" onclick="toggleRank(this)">
-                        <span><i class="fas fa-project-diagram" style="margin-right: 15px;"></i> ESCALA COORDINACIÓN</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="rank-content">
-                        <p>Oficiales encargados de la coordinación táctica y la supervisión directa de los turnos de patrulla y las investigaciones. Son el enlace esencial entre la Jefatura y el personal de campo, asegurando que las directrices se implementen correctamente.</p>
-                        <ul>
-                            <li><strong>MAJOR:</strong> Coordinador de Área o Sección Especial, con responsabilidad sobre grandes grupos de personal. (Máx. 2)</li>
-                            <li><strong>CAPTAIN:</strong> Lidera un turno o sección específica, responsable del rendimiento de sus Deputies. (Máx. 3)</li>
-                            <li><strong>LIEUTENANT:</strong> Supervisión en calle y evaluación de desempeño operativo de primera línea. (Máx. 4)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="rank-item">
-                    <div class="rank-header" onclick="toggleRank(this)">
-                        <span><i class="fas fa-road" style="margin-right: 15px;"></i> ESCALA OPERATIVA</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="rank-content">
-                        <p>Esta escala incluye a los Agentes más experimentados, con responsabilidades de supervisión inmediata en la calle y la capacidad de liderar operaciones menores. Sirven como mentores para los recién llegados y son el primer nivel de mando directo.</p>
-                        <ul>
-                            <li><strong>SERGEANT Ⅱ:</strong> Máximo grado de Sargento, con responsabilidades de instrucción y gestión de incidentes complejos. (Máx. 5)</li>
-                            <li><strong>SERGEANT Ⅰ:</strong> Primer nivel de supervisión en campo, a cargo de equipos de patrulla y respuesta inmediata. (Sin Límite)</li>
-                            <li><strong>CORPORATIVE DEPUTY:</strong> Agente veterano con experiencia, capaz de asumir la responsabilidad de un incidente en ausencia de un sargento. (Sin Límite)</li>
+                            <li>Respuesta a incidentes de Nivel 1 (accidentes, disturbios menores).</li>
+                            <li>Patrullaje estándar en zonas de bajo a medio riesgo.</li>
+                            <li>Uso reglamentario de pistola y SMG.</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="rank-item">
-                    <div class="rank-header" onclick="toggleRank(this)">
-                        <span><i class="fas fa-user-shield" style="margin-right: 15px;"></i> ESCALA BÁSICA</span>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="rank-header" data-target="content-3">
+                        DEPUTY I / II / III <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="rank-content">
-                        <p>El núcleo del Departamento. Estos agentes cumplen con las funciones esenciales de patrulla, respuesta a emergencias y aplicación de la ley. Su progresión se basa en el tiempo de servicio, la demostración de competencia y la formación continua.</p>
+                    <div class="rank-content" id="content-3">
+                        <p><strong>Descripción:</strong> El pilar del Departamento. Demuestran consistencia y competencia en diversas situaciones operativas, asumiendo mayor responsabilidad y mentoría.</p>
+                        <strong>Funciones:</strong>
                         <ul>
-                            <li><strong>SENIOR DEPUTY:</strong> Deputy de alto rango, con varios años de experiencia y entrenamiento especializado. (Sin Límite)</li>
-                            <li><strong>DEPUTY SHERIFF Ⅱ:</strong> Agente consolidado que ha completado su período de prueba y demuestra autonomía y competencia. (Sin Límite)</li>
-                            <li><strong>DEPUTY SHERIFF Ⅰ:</strong> Agente recién graduado de la Academia, con autonomía en funciones básicas. (Sin Límite)</li>
-                            <li><strong>DEPUTY TRAINEE:</strong> Oficial en la fase final de la Academia, realizando prácticas tuteladas por un FTO. (Sin Límite)</li>
-                            <li><strong>JUNIOR DEPUTY:</strong> Agente en los primeros meses de servicio, bajo estricta supervisión y periodo de prueba. (Sin Límite)</li>
+                            <li>Respuesta a incidentes de Nivel 2 (robos, persecuciones de alto riesgo).</li>
+                            <li>Asistencia en la formación de Cadetes (I y II).</li>
+                            <li>El Deputy III puede optar a la especialización en Divisiones Tácticas.</li>
                         </ul>
                     </div>
                 </div>
-
-            </div> <hr style="border-color: var(--border-color); margin: 60px 0;">
-
-            <div style="background-color: var(--card-background); padding: 30px; border-radius: 8px; border-top: 5px solid var(--secondary-color);">
-                <h3 style="color: var(--primary-color); margin-top: 0;"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> SISTEMA DE EXÁMENES Y ASCENSOS</h3>
-                <p style="color: #ccc; margin-bottom: 20px;">
-                    Todos los ascensos en LSSD se rigen por un sistema estructurado de formación interna y evaluaciones oficiales. La promoción a rangos superiores requiere la superación de exámenes teórico-prácticos específicos, diseñados para validar el conocimiento normativo y la competencia operacional.
-                </p>
-                <p style="color: #ccc;">
-                    Adicionalmente, es obligatorio demostrar un compromiso, disciplina y experiencia impecables durante el servicio, asegurando que cada ascenso se base en el mérito y la capacidad de liderazgo.
-                </p>
+                
+                <div class="rank-item">
+                    <div class="rank-header" data-target="content-4">
+                        SERGEANT <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content" id="content-4">
+                        <p><strong>Descripción:</strong> Supervisores directos de los Deputies. Gestionan los turnos, asignan patrullas y sirven como mandos en incidentes de gran escala. (H-50 Operativo).</p>
+                        <strong>Funciones:</strong>
+                        <ul>
+                            <li>Asumir el mando (H-50) en ausencia de Jefatura.</li>
+                            <li>Evaluar el desempeño de los agentes de menor rango.</li>
+                            <li>Coordinar las unidades de campo durante persecuciones y atracos.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-item">
+                    <div class="rank-header" data-target="content-5">
+                        LIEUTENANT <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content" id="content-5">
+                        <p><strong>Descripción:</strong> Liderazgo superior y responsable de la gestión de una División o Sección específica (Ej: Tráfico, Formación, SWAT). Su enfoque es administrativo y táctico.</p>
+                        <strong>Funciones:</strong>
+                        <ul>
+                            <li>Diseñar y actualizar los protocolos de operación.</li>
+                            <li>Liderar y gestionar una División completa.</li>
+                            <li>Informar directamente a la Jefatura sobre el rendimiento divisional.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-item">
+                    <div class="rank-header" data-target="content-6">
+                        COMMANDER (JEFE ADJUNTO) <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content" id="content-6">
+                        <p><strong>Descripción:</strong> Asiste al Director en la gestión diaria de todo el Departamento. Es la máxima autoridad operativa después del Sheriff Principal.</p>
+                        <strong>Funciones:</strong>
+                        <ul>
+                            <li>Supervisar la correcta aplicación de toda la normativa.</li>
+                            <li>Tomar decisiones estratégicas a nivel departamental.</li>
+                            <li>Representar al LSSD ante otras agencias (LSPD, EMS, etc.).</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="rank-item">
+                    <div class="rank-header" data-target="content-7">
+                        DIRECTOR / SHERIFF <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="rank-content" id="content-7">
+                        <p><strong>Descripción:</strong> El máximo responsable del Departamento (OOC y IC). Establece la visión, los objetivos a largo plazo y la política general del LSSD.</p>
+                        <strong>Funciones:</strong>
+                        <ul>
+                            <li>Responsabilidad final sobre todas las acciones del Departamento.</li>
+                            <li>Gestión del equipo de Jefatura y reclutamiento superior.</li>
+                            <li>Mantener la imagen y las relaciones públicas de la facción.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
         </section>
     </main>
-
-    <script>
-        function toggleRank(element) {
-            // Obtiene el contenedor de contenido asociado al encabezado
-            const content = element.nextElementSibling;
-            
-            // Cierra los demás acordeones abiertos
-            document.querySelectorAll('.rank-content').forEach(item => {
-                if (item !== content && item.classList.contains('active')) {
-                    item.classList.remove('active');
-                    item.previousElementSibling.classList.remove('active');
-                }
-            });
-
-            // Alterna el estado del contenido actual
-            content.classList.toggle('active');
-            element.classList.toggle('active');
-        }
-    </script>
 
     <footer>
         <p>&copy; 2024 Departamento del Sheriff de Regidos. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        document.getElementById('menuToggle').onclick = function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Script para el acordeón de rangos
+        document.querySelectorAll('.rank-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = document.getElementById(header.dataset.target);
+                const isActive = content.classList.contains('active');
+
+                // Cerrar todos los demás
+                document.querySelectorAll('.rank-content.active').forEach(item => {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                });
+
+                // Abrir o cerrar el actual
+                if (!isActive) {
+                    content.classList.add('active');
+                    header.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
