@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros | Departamento del Sheriff de REGIDOS</title> 
-    <link rel="icon" type="image/x-icon" href="/LSSD-RegidosRP/favicon.ico">
-    <link rel="stylesheet" href="/LSSD-RegidosRP/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -16,14 +16,15 @@
         <div class="hero-overlay"></div>
         <nav class="navbar">
             <div class="logo"><img src="logo.png" alt="Logo LSSD Regidos" style="height: 50px; width: auto;"></div>
-            <ul class="nav-links">
-                <li><a href="/LSSD-RegidosRP/index.html">Inicio</a></li> 
-                <li><a href="/LSSD-RegidosRP/about.html">Nosotros</a></li>
-                <li><a href="/LSSD-RegidosRP/ranks.html">Rangos</a></li>
-                <li><a href="/LSSD-RegidosRP/rules.html">Normativa</a></li>
-                <li><a href="/LSSD-RegidosRP/recruitment.html">Reclutamiento</a></li>
-                <li><a href="/LSSD-RegidosRP/contact.html">Contacto</a></li> 
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="ranks.html">Rangos</a></li>
+                <li><a href="rules.html">Normativa</a></li>
+                <li><a href="recruitment.html">Reclutamiento</a></li>
+                <li><a href="contact.html">Contacto</a></li> 
             </ul>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
         </nav>
         <div class="hero-content">
             <h1>NUESTRA MISIÓN Y VALORES</h1>
@@ -35,9 +36,9 @@
         <section class="container content-section" style="padding: 60px 20px;">
             <h2 style="color: var(--primary-color);">Nuestra Historia, Misión y Fundamentos</h2>
 
-            <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 40px;">
+            <div class="two-columns">
                 
-                <div style="flex: 2; padding: 20px; background-color: var(--card-background); border-radius: 8px;">
+                <div class="main-content-col">
                     
                     <div style="margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px;">
                         <h3 style="color: var(--primary-color); margin-top: 0;"><i class="fas fa-bullseye" style="margin-right: 10px;"></i> Misión y Visión</h3>
@@ -71,7 +72,7 @@
                     
                 </div>
 
-                <div style="flex: 1; padding: 0;">
+                <div class="sidebar-content-col">
                     <h3 style="color: var(--primary-color); text-align: center; margin-bottom: 25px;">
                         Nuestros Fundamentos Éticos
                     </h3>
@@ -91,7 +92,7 @@
                             <i class="fas fa-users" style="color: var(--primary-color); margin-right: 10px;"></i> 
                             <strong>RESPETO COMUNITARIO:</strong>
                             <p>Valoramos la diversidad y tratamos a todos los ciudadanos y compañeros con dignidad, justicia e imparcialidad en todo momento.</p>
-                        </li >
+                        </li>
                         <li class="value-card">
                             <i class="fas fa-fist-raised" style="color: var(--primary-color); margin-right: 10px;"></i> 
                             <strong>CORAJE:</strong>
@@ -107,5 +108,10 @@
     <footer>
         <p>&copy; 2024 Departamento del Sheriff de Regidos. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        document.getElementById('menuToggle').onclick = function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
