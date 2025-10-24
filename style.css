@@ -1,146 +1,85 @@
-/* VARIABLES GLOBALES Y RESET BÁSICO (PALETA DESIERTO SHERIFF) */
 :root {
-    --primary-color: #A37E2F; /* Color Desierto Sheriff (Botones, Títulos) */
-    --secondary-color: #6B4F1B; /* Contraste/Énfasis (Hover) */
-    --text-light: #f4f4f4; /* Blanco roto */
-    --text-dark: #221C14; 
-    --background-dark: #1A150F; /* Fondo General (Marrón-Negro) */
-    --card-background: #221C14; /* Fondo de Tarjetas y Secciones */
-    --border-color: #443C31; /* Borde oscuro */
+    --background-color: #1a1a1a;
+    --card-background: #252525;
+    --text-light: #f0f0f0;
+    --text-dark: #8c8c8c;
+    --primary-color: #ffc107; /* Amarillo/Dorado del LSSD */
+    --secondary-color: #dc3545; /* Rojo de Alerta/Acción */
+    --border-color: #333;
 }
 
+/* --- REGLAS BÁSICAS --- */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    /* FUENTE PARA CUERPO */
     font-family: 'Lato', sans-serif;
-    background-color: var(--background-dark);
     color: var(--text-light);
+    background-color: var(--background-color);
     line-height: 1.6;
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: var(--secondary-color);
 }
 
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
 h1, h2, h3 {
-    /* FUENTE PARA TÍTULOS */
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 15px;
-    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h2 {
-    text-align: center;
     font-size: 2.2em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: var(--primary-color);
+    text-align: center;
 }
 
-/* --- ANIMACIONES GLOBALES --- */
-/* 1. Keyframes para el efecto de aparición */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* 2. Keyframes para el efecto de brillo del botón principal */
-@keyframes glowing {
-    0% { box-shadow: 0 0 5px var(--primary-color); }
-    50% { box-shadow: 0 0 20px var(--primary-color), 0 0 10px var(--secondary-color); }
-    100% { box-shadow: 0 0 5px var(--primary-color); }
-}
-
-/* Aplicar la animación de aparición a las secciones de contenido */
-main section, footer {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* Aplicar retrasos para que aparezcan en secuencia */
-main section:nth-child(1) { animation-delay: 0.3s; }
-main section:nth-child(2) { animation-delay: 0.6s; }
-footer { animation-delay: 0.9s; }
-
-
-/* --- ESTILOS DE BOTONES --- */
-.btn {
-    display: inline-block;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    position: relative; /* Necesario para la sombra y el brillo */
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--text-dark); /* Color oscuro para contraste con el desierto */
-    border: 2px solid var(--primary-color);
-}
-
-.btn-primary:hover {
-    background-color: #927129; /* Tono más oscuro al hacer hover */
-    transform: translateY(-2px);
-}
-
-/* Aplicar animación de brillo al botón principal de CTA */
-.btn-cta-glowing {
-    animation: glowing 2s infinite;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--text-dark);
-    transform: translateY(-2px);
+main {
+    /* CORRECCIÓN CLAVE: Empujar el contenido principal hacia abajo para que no quede
+       oculto detrás del encabezado fijo. */
+    padding-top: 100px; /* Ajusta este valor si la altura de tu navbar cambia */
+    background-color: var(--background-color);
+    color: var(--text-light);
+    min-height: 100vh;
 }
 
 /* --- CABECERA (HERO SECTION) --- */
 .hero {
-    /* Mantenemos tu imagen subida */
-    background: url('https://i.ibb.co/GfGR4jL0/imagen-2025-10-22-121125902.png') no-repeat center center/cover; 
-    height: 80vh; 
+    background: url('https://i.ibb.co/GfGR4jL0/imagen-2025-10-22-121125902.png') no-repeat center center/cover;
+    height: 100vh;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
-    text-align: center;
-    /* Efecto Parallax Sutil: la imagen se moverá muy ligeramente en el scroll */
-    background-attachment: fixed;
-    transition: background-position 0.5s ease-out; 
 }
 
-/* Ajuste para páginas interiores (hace el encabezado más pequeño) */
-.small-hero {
-    height: 40vh !important;
-}
-
-.small-hero .hero-content {
-    margin-bottom: 20px;
+/* ESTILOS DE ENCABEZADO FIJO */
+.hero.small-hero {
+    height: 250px; /* Altura más corta para páginas internas */
+    /* PROPIEDADES CLAVE: Fijar el encabezado completo */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de todo */
 }
 
 .hero-overlay {
@@ -149,34 +88,26 @@ footer { animation-delay: 0.9s; }
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Oscurece la imagen para que el texto resalte */
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
+/* --- NAVEGACIÓN (NAVBAR) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    position: relative;
-    z-index: 10;
+    width: 100%; /* El navbar dentro del hero fijo ya está al 100% de ancho */
+    position: relative; /* Para que los elementos dentro de .navbar usen esta posición */
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo para que el texto sea legible */
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* Estilo para la imagen del logo (para que se vea) */
 .logo img {
-    height: 50px; 
-    width: auto;
-    /* Animación sutil al pasar el ratón sobre el logo */
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05) rotate(-3deg);
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: 700;
+    height: 60px; /* Ajusta el tamaño del logo */
+    vertical-align: middle;
 }
 
 .nav-links {
@@ -185,322 +116,343 @@ footer { animation-delay: 0.9s; }
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 .nav-links a {
     color: var(--text-light);
-    font-weight: 500;
-    padding: 5px 10px;
-    transition: color 0.3s, border-bottom 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-
-.hero-content {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    padding: 5px 0;
     position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* --- CONTENIDO PRINCIPAL DEL HERO (Textos) --- */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 5;
-    padding: 0 5%;
-    margin-bottom: 80px;
+    animation: fadeIn 1s ease-in-out;
+    width: 90%;
 }
 
 .hero-content h1 {
-    font-size: 4em; /* Título más grande */
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    font-size: 4em;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
 }
 
 .hero-content p {
-    font-size: 1.4em;
-    margin-bottom: 30px;
-    color: #ccc;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: var(--text-light);
+    animation: slideInUp 1s ease-in-out;
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: var(--background-dark);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    color: #666;
-    border-top: 1px solid var(--border-color);
+
+/* --- BOTONES --- */
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
 }
 
-/* --- ESTILOS ADICIONALES PARA TARJETAS DE VALORES (about.html) --- */
-.value-card {
-    background-color: var(--card-background);
-    padding: 18px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    border-bottom: 3px solid var(--secondary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para interactividad */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.value-card strong {
+.btn-secondary {
+    background-color: transparent;
     color: var(--primary-color);
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.1em;
+    border: 2px solid var(--primary-color);
 }
 
-.value-card p {
-    font-size: 0.9em;
-    color: #b0b0b0;
-    margin-top: 5px;
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: #e0ac05;
 }
 
-/* --- ESTILOS DE ESTRUCTURA FLEXIBLES (Reemplaza CSS Inline) --- */
-
-/* Estilos de Contenido General (Aplicable a rules, about, recruitment) */
-.content-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
-/* Estructura de Dos Columnas (Usada en about.html y rules.html) */
+/* Efecto de brillo para CTA */
+.btn-cta-glowing {
+    box-shadow: 0 0 15px var(--primary-color), 0 0 5px var(--primary-color) inset;
+    transition: all 0.4s ease;
+}
+.btn-cta-glowing:hover {
+    box-shadow: 0 0 25px var(--primary-color), 0 0 10px var(--primary-color) inset;
+}
+
+
+/* --- SECCIONES DE CONTENIDO --- */
+.content-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
 .two-columns {
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    margin-top: 40px;
 }
 
 .main-content-col {
     flex: 2;
-    padding: 20px;
     background-color: var(--card-background);
+    padding: 30px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-content-col {
     flex: 1;
-    padding: 0;
-}
-
-/* Estilos para Cajas de Reglas/Secciones */
-.rule-box {
     background-color: var(--card-background);
     padding: 30px;
     border-radius: 8px;
-    margin-bottom: 40px; /* Para reglas que van apiladas */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.rule-box:hover {
-    box-shadow: 0 0 15px rgba(163, 126, 47, 0.2); /* Sombra sutil al pasar el ratón */
+.value-card {
+    background-color: #333;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 15px;
+    border-radius: 4px;
 }
 
-/* Variante de la caja para énfasis/separación */
+.value-card p {
+    color: var(--text-dark);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+/* --- ACORDEÓN DE RANGOS --- */
+.rank-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.rank-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--card-background);
+}
+
+.rank-header {
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.rank-header:hover {
+    background-color: #3a3a3a !important;
+}
+
+.rank-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 25px;
+}
+
+.rank-content.active {
+    max-height: 500px; /* Suficiente para contener el texto */
+    padding: 15px 25px 25px;
+}
+
+.rank-content p {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+/* --- SECCIÓN DE NORMAS/REGLAS --- */
+.rule-box {
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.rule-box h3 {
+    text-transform: none;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
 .rule-box-primary {
+    background-color: var(--card-background);
     border-left: 5px solid var(--primary-color);
 }
 
 .rule-box-secondary {
+    background-color: #333;
     border-left: 5px solid var(--secondary-color);
 }
 
-.rule-box h3 {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-}
-
-.rule-box ul, .rule-box ol {
-    margin-top: 15px;
+.rule-box ul {
+    list-style: none;
+    padding: 0;
 }
 
 .rule-box ul li {
     margin-bottom: 10px;
-    color: #ccc;
+    color: var(--text-dark);
 }
 
-.rule-box ul.columns-3 {
-    columns: 3;
-    list-style: none;
-    padding: 0;
-}
-
-.rule-box ul.columns-2 {
+.columns-2 {
     columns: 2;
-    list-style: none;
-    padding: 0;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: disc;
+    padding-left: 20px;
 }
 
-/* Estilo para el recuadro de derechos del detenido */
+.columns-3 {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    list-style: disc;
+    padding-left: 20px;
+}
+
 .detainee-rights {
-    background-color: #282828; 
-    padding: 15px; 
-    border-radius: 4px; 
-    margin-top: 15px; 
-    border-left: 3px solid #FFC107;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    margin-top: 15px;
 }
 
-
-/* --- ESTILOS ADICIONALES PARA RANGOS (ranks.html) --- */
-
-.rank-accordion {
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.rank-item {
-    background-color: var(--card-background);
-    color: var(--text-light);
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.rank-item:hover {
-    background-color: #282828; 
-    transform: scale(1.01); /* Efecto sutil al pasar el ratón */
-}
-
-.rank-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--primary-color);
-}
-
-.rank-header i {
-    color: var(--primary-color);
-    transition: transform 0.3s;
-}
-
-.rank-header.active i {
-    transform: rotate(180deg);
-}
-
-.rank-content {
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+/* --- FOOTER --- */
+footer {
+    background-color: #0d0d0d;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
     border-top: 1px solid var(--border-color);
 }
 
-.rank-content.active {
-    max-height: 500px;
-    padding: 20px;
+/* --- ANIMACIONES --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.rank-content p {
-    margin-bottom: 15px;
-    color: #ccc;
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.rank-content ul {
-    list-style: disc;
-    margin-left: 20px;
-    color: #ccc;
-    padding-bottom: 10px;
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.rank-content strong {
+/* --- RESPONSIVE / MÓVIL --- */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1001;
     color: var(--primary-color);
 }
 
-/* --- RESPONSIVE DESIGN (Ajustes para móviles) --- */
-
-/* Botón de menú para móvil */
-.menu-toggle {
-    display: none; 
-    font-size: 1.5em;
-    color: var(--text-light);
-    cursor: pointer;
-    z-index: 11;
+@media (max-width: 992px) {
+    .two-columns, .recruitment-grid {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: 60vh;
-        background-attachment: scroll; /* Desactivar parallax en móvil */
+    /* Ocultar la navegación principal y mostrar el botón de menú */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 90px; /* Ajustar basado en la altura de tu navbar */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-top: 1px solid var(--primary-color);
+        padding-bottom: 20px;
+        z-index: 9;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* Mostrar menú cuando está activo */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .hero-content h1 {
         font-size: 2.5em;
     }
-    
+
     .hero-content p {
         font-size: 1.1em;
     }
     
-    /* Mostrar botón de menú */
-    .menu-toggle {
-        display: block;
-    }
-    
-    /* Ocultar menú principal y prepararlo para desplegable */
-    .nav-links {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 80px; /* Debajo de la navbar */
-        right: 0;
-        background-color: var(--background-dark);
-        border: 1px solid var(--border-color);
-        width: 250px;
-        padding: 20px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        z-index: 9;
-    }
-
-    /* Mostrar menú al estar activo (se maneja con JS) */
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-links li {
-        margin: 10px 0;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 5px;
-    }
-    
-    .nav-links a {
-        display: block;
-        padding: 10px 0;
-    }
-
-    /* Columnas a fila única en móvil */
-    .two-columns, .contact-info-grid, .recruitment-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .main-content-col, .sidebar-content-col {
-        flex: auto; /* Restablecer el flex */
-        width: 100%;
-        padding: 15px;
-    }
-    
-    .rule-box-primary, .rule-box-secondary {
-        margin-bottom: 20px;
-    }
-    
-    .rule-box ul.columns-3, .rule-box ul.columns-2 {
-        columns: 1; /* Volver a una columna */
-    }
-
-    /* Para about.html, si se usa el contenedor principal */
-    .content-wrapper {
-        gap: 20px;
+    .columns-2, .columns-3 {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
     }
 }
