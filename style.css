@@ -3,9 +3,9 @@
     --primary-color: #6c9af0; /* Color Desierto Sheriff (Botones, Títulos) */
     --secondary-color: #1b346b; /* Contraste/Énfasis (Hover) */
     --text-light: #f4f4f4; /* Blanco roto */
-    --text-dark: #221C14; 
+    --text-dark: #151422; 
     --background-dark: #1A150F; /* Fondo General (Marrón-Negro) */
-    --card-background: #221C14; /* Fondo de Tarjetas y Secciones */
+    --card-background: #151422; /* Fondo de Tarjetas y Secciones */
     --border-color: #221f36; /* Borde oscuro */
 }
 
@@ -98,7 +98,7 @@ footer { animation-delay: 0.9s; }
 }
 
 .btn-primary:hover {
-    background-color: #927129; /* Tono más oscuro al hacer hover */
+    background-color: #2b2992; /* Tono más oscuro al hacer hover */
     transform: translateY(-2px);
 }
 
@@ -298,7 +298,7 @@ footer {
 }
 
 .rule-box:hover {
-    box-shadow: 0 0 15px rgba(163, 126, 47, 0.2); /* Sombra sutil al pasar el ratón */
+    box-shadow: 0 0 15px rgba(55, 47, 163, 0.2); /* Sombra sutil al pasar el ratón */
 }
 
 /* Variante de la caja para énfasis/separación */
@@ -342,7 +342,7 @@ footer {
     padding: 15px; 
     border-radius: 4px; 
     margin-top: 15px; 
-    border-left: 3px solid #FFC107;
+    border-left: 3px solid #2c07ff;
 }
 
 
