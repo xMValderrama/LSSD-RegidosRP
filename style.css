@@ -1,12 +1,12 @@
 /* VARIABLES GLOBALES Y RESET BÁSICO (PALETA DESIERTO SHERIFF) */
 :root {
-    --primary-color: #A37E2F; /* Color Desierto Sheriff (Botones, Títulos) */
-    --secondary-color: #6B4F1B; /* Contraste/Énfasis (Hover) */
+    --primary-color: #6c9af0; /* Color Desierto Sheriff (Botones, Títulos) */
+    --secondary-color: #1b346b; /* Contraste/Énfasis (Hover) */
     --text-light: #f4f4f4; /* Blanco roto */
     --text-dark: #221C14; 
     --background-dark: #1A150F; /* Fondo General (Marrón-Negro) */
     --card-background: #221C14; /* Fondo de Tarjetas y Secciones */
-    --border-color: #443C31; /* Borde oscuro */
+    --border-color: #221f36; /* Borde oscuro */
 }
 
 * {
@@ -122,7 +122,7 @@ footer { animation-delay: 0.9s; }
 /* --- CABECERA (HERO SECTION) --- */
 .hero {
     /* Mantenemos tu imagen subida */
-    background: url('https://i.ibb.co/GfGR4jL0/imagen-2025-10-22-121125902.png') no-repeat center center/cover; 
+    background: url('https://i.ibb.co/jP088K5f/imagen-2025-10-29-135336975.png') no-repeat center center/cover; 
     height: 80vh; 
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@ footer { animation-delay: 0.9s; }
 
 /* Estilo para la imagen del logo (para que se vea) */
 .logo img {
-    height: 50px; 
+    height: 60px; 
     width: auto;
     /* Animación sutil al pasar el ratón sobre el logo */
     transition: transform 0.3s ease;
